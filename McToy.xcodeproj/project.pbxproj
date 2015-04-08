@@ -1,0 +1,121 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXFileReference section */
+		083EC2F51AD463600070632C /* McToy.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = McToy.java; sourceTree = "<group>"; };
+		083EC3021AD465220070632C /* Blah.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = Blah.java; sourceTree = "<group>"; };
+		083EC3031AD465220070632C /* Interpretador.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = Interpretador.java; sourceTree = "<group>"; };
+		083EC3041AD465220070632C /* teste.blah */ = {isa = PBXFileReference; lastKnownFileType = text; path = teste.blah; sourceTree = "<group>"; };
+		08E782C91AD55F7D00431B55 /* tokanizer.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; name = tokanizer.java; path = TESTES/tokanizer.java; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		083EC2EE1AD462F20070632C = {
+			isa = PBXGroup;
+			children = (
+				083EC3001AD4648D0070632C /* Exemplos */,
+				083EC2FD1AD464410070632C /* Fonte */,
+				083EC2F61AD464350070632C /* TESTES */,
+			);
+			sourceTree = "<group>";
+		};
+		083EC2F61AD464350070632C /* TESTES */ = {
+			isa = PBXGroup;
+			children = (
+				083EC2FF1AD464550070632C /* Exemplos */,
+			);
+			path = TESTES;
+			sourceTree = "<group>";
+		};
+		083EC2FD1AD464410070632C /* Fonte */ = {
+			isa = PBXGroup;
+			children = (
+				083EC2F51AD463600070632C /* McToy.java */,
+			);
+			path = Fonte;
+			sourceTree = "<group>";
+		};
+		083EC2FF1AD464550070632C /* Exemplos */ = {
+			isa = PBXGroup;
+			children = (
+				08E782C91AD55F7D00431B55 /* tokanizer.java */,
+				083EC3011AD465220070632C /* Exemplo Interpretador */,
+			);
+			path = Exemplos;
+			sourceTree = SOURCE_ROOT;
+		};
+		083EC3001AD4648D0070632C /* Exemplos */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Exemplos;
+			sourceTree = "<group>";
+		};
+		083EC3011AD465220070632C /* Exemplo Interpretador */ = {
+			isa = PBXGroup;
+			children = (
+				083EC3021AD465220070632C /* Blah.java */,
+				083EC3031AD465220070632C /* Interpretador.java */,
+				083EC3041AD465220070632C /* teste.blah */,
+			);
+			name = "Exemplo Interpretador";
+			path = "../TESTES/Exemplo Interpretador";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXProject section */
+		083EC2EF1AD462F20070632C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+			};
+			buildConfigurationList = 083EC2F21AD462F20070632C /* Build configuration list for PBXProject "McToy" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 083EC2EE1AD462F20070632C;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+			);
+		};
+/* End PBXProject section */
+
+/* Begin XCBuildConfiguration section */
+		083EC2F31AD462F20070632C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		083EC2F41AD462F20070632C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		083EC2F21AD462F20070632C /* Build configuration list for PBXProject "McToy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				083EC2F31AD462F20070632C /* Debug */,
+				083EC2F41AD462F20070632C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 083EC2EF1AD462F20070632C /* Project object */;
+}
