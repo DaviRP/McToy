@@ -7,10 +7,12 @@
 	objects = {
 
 /* Begin PBXFileReference section */
-		083EC2F51AD463600070632C /* McToy.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = McToy.java; sourceTree = "<group>"; };
 		083EC3021AD465220070632C /* Blah.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = Blah.java; sourceTree = "<group>"; };
 		083EC3031AD465220070632C /* Interpretador.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = Interpretador.java; sourceTree = "<group>"; };
 		083EC3041AD465220070632C /* teste.blah */ = {isa = PBXFileReference; lastKnownFileType = text; path = teste.blah; sourceTree = "<group>"; };
+		08BCBC201AD5692C001582C8 /* Toy.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = Toy.java; sourceTree = "<group>"; };
+		08BCBC211AD59D3A001582C8 /* Interpretador.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = Interpretador.java; sourceTree = "<group>"; };
+		08BCBC221AD59DD7001582C8 /* teste.Toy */ = {isa = PBXFileReference; lastKnownFileType = text; path = teste.Toy; sourceTree = "<group>"; };
 		08E782C91AD55F7D00431B55 /* tokanizer.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; name = tokanizer.java; path = TESTES/tokanizer.java; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -35,7 +37,9 @@
 		083EC2FD1AD464410070632C /* Fonte */ = {
 			isa = PBXGroup;
 			children = (
-				083EC2F51AD463600070632C /* McToy.java */,
+				08BCBC201AD5692C001582C8 /* Toy.java */,
+				08BCBC221AD59DD7001582C8 /* teste.Toy */,
+				08BCBC211AD59D3A001582C8 /* Interpretador.java */,
 			);
 			path = Fonte;
 			sourceTree = "<group>";
