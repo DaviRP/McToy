@@ -9,12 +9,10 @@ class Interpretador {
     
     public void interpreta(String l[]) {
         
+        int i=0,j=0;
         
-        System.out.println(l[0]);
-            
-            
-            
-            
+        
+        
         
         
      
