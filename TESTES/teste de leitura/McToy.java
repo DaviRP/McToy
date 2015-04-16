@@ -14,8 +14,6 @@ import java.util.StringTokenizer;
 class McToy{
     
         
-        
-        
     public FileReader file;
     
     public BufferedReader buffer;
