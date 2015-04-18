@@ -6,6 +6,7 @@ class Toy{
         File f;
         Scanner s;
         Interpretador b;
+        Arquivador a;
         String linhas[] = new String[2000];
         
         
@@ -15,6 +16,8 @@ class Toy{
         
         b = new Interpretador();
         
+        a = new Arquivador();
+        
                int i = 0;
         while(s.hasNext()) {
             linhas[i] = s.nextLine();
@@ -22,6 +25,7 @@ class Toy{
         }
         
         
-                b.interpreta(linhas);
+              //  b.interpreta(linhas);
+                a.arquiva(linhas);
     }
 }

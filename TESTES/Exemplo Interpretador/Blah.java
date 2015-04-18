@@ -1,4 +1,4 @@
-/**
+2/**
  * Exemplo de interpretador.
  *
  * Esse é o ponto de partida para o interpretador da linguagem 'Blah'.

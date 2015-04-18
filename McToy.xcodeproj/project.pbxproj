@@ -18,6 +18,7 @@
 		08BCBC201AD5692C001582C8 /* Toy.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = Toy.java; sourceTree = "<group>"; };
 		08BCBC211AD59D3A001582C8 /* Interpretador.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = Interpretador.java; sourceTree = "<group>"; };
 		08BCBC221AD59DD7001582C8 /* teste.Toy */ = {isa = PBXFileReference; lastKnownFileType = text; path = teste.Toy; sourceTree = "<group>"; };
+		08EA67E21AE2876F00028556 /* Arquivador.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = Arquivador.java; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -67,6 +68,7 @@
 				08BCBC201AD5692C001582C8 /* Toy.java */,
 				08BCBC221AD59DD7001582C8 /* teste.Toy */,
 				08BCBC211AD59D3A001582C8 /* Interpretador.java */,
+				08EA67E21AE2876F00028556 /* Arquivador.java */,
 			);
 			path = Fonte;
 			sourceTree = "<group>";

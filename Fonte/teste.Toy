@@ -1,6 +1,6 @@
 Start
-$s = 5
-$i = 6
+$s=5
+$i=6
 true? (s<i) {
      s = 9
 }

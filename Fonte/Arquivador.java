@@ -3,36 +3,26 @@ import java.io.*;
 import java.util.Scanner;
 
 
-class Interpretador {
+class Arquivador{
     
     
-    
-    private String linhas[];
-    
-   
-    public void interpreta(String l[]) {
+    private String lineas[][];
+
+
+
+
+    public void arquiva(String Linhas[] ){
+        
         int i=0,j=0;
+        
        
-
-        for(i = 0; i < l.length; i++) {
-            if(l[i] != null) {
-                // TODO: interpretar a linha
-                System.out.println("Linha " + (i + 1) + ": " + l[i]);
-            }
-        }
-        
-         System.out.println("------------------------------------");
-        
-        
-
-        
         String [][]teste= new String[100][100];
         
         
         
         for(i=0;i<5;i++){
             
-            StringTokenizer token=new StringTokenizer(l[i]);
+            StringTokenizer token=new StringTokenizer(Linhas[i]);
             
             while(token.hasMoreTokens()){
                 
@@ -43,22 +33,25 @@ class Interpretador {
                 
                 j++;
                 
-                }
+            }
             
             j=0;
             
         }
         i=0;
         
-       
+        lineas= new String[100][100];
         
         
-      
+        
+        
         while(teste[i][j]!=null){
             
             while(teste[i][j]!=null){
                 
-                System.out.println("coluna"+i+"linha"+j+": "+teste[i][j]);
+                lineas[i][j]= teste[i][j].replace("="," = ");
+                
+                System.out.println(lineas[i][j]);
                 
                 
                 j++;
@@ -69,12 +62,31 @@ class Interpretador {
             
             i++;
         }
-      
-       
-
+        
         
         
        
-    
+        
+       
+        
+        
+        
+        
+        
+        
+        
+        
+        
     }
+
+
+
+
+
+
+
+
+
+
+
 }
