@@ -24,8 +24,9 @@ class Toy{
             i++;
         }
         
+        a.arquiva(linhas);
+        a.interpreta();
         
-              //  b.interpreta(linhas);
-                a.arquiva(linhas);
+        
     }
 }

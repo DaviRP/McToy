@@ -15,6 +15,7 @@
 		081129531AD6A05D00E616F4 /* teste.McToy */ = {isa = PBXFileReference; lastKnownFileType = text; path = teste.McToy; sourceTree = "<group>"; };
 		081129541AD6A05D00E616F4 /* tokanizer.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = tokanizer.java; sourceTree = "<group>"; };
 		081129551AD6A42300E616F4 /* Main.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = Main.java; sourceTree = "<group>"; };
+		0829296B1AE534BE009CB50E /* Variavel.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = Variavel.java; sourceTree = "<group>"; };
 		08BCBC201AD5692C001582C8 /* Toy.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = Toy.java; sourceTree = "<group>"; };
 		08BCBC211AD59D3A001582C8 /* Interpretador.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = Interpretador.java; sourceTree = "<group>"; };
 		08BCBC221AD59DD7001582C8 /* teste.Toy */ = {isa = PBXFileReference; lastKnownFileType = text; path = teste.Toy; sourceTree = "<group>"; };
@@ -67,8 +68,9 @@
 			children = (
 				08BCBC201AD5692C001582C8 /* Toy.java */,
 				08BCBC221AD59DD7001582C8 /* teste.Toy */,
-				08BCBC211AD59D3A001582C8 /* Interpretador.java */,
 				08EA67E21AE2876F00028556 /* Arquivador.java */,
+				08BCBC211AD59D3A001582C8 /* Interpretador.java */,
+				0829296B1AE534BE009CB50E /* Variavel.java */,
 			);
 			path = Fonte;
 			sourceTree = "<group>";

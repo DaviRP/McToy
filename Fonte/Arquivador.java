@@ -1,22 +1,34 @@
 import java.util.StringTokenizer;
 import java.io.*;
 import java.util.Scanner;
+import java.lang.String;
 
 
-class Arquivador{
+class Arquivador extends Interpretador{
     
-    
-    private String lineas[][];
+ 
 
-
-
-
-    public void arquiva(String Linhas[] ){
+    public void arquiva(String Linhas[]){
         
         int i=0,j=0;
         
-       
-        String [][]teste= new String[100][100];
+        
+        
+        while(Linhas[i]!=null){
+            
+            Linhas [i]= Linhas[i].replace("="," = ");
+            Linhas [i]= Linhas[i].replace(")"," ) ");
+            Linhas [i]= Linhas[i].replace("("," ( ");
+            Linhas [i]= Linhas[i].replace("{"," { ");
+            Linhas [i]= Linhas[i].replace("}"," } ");
+            Linhas [i]=Linhas[i].replace(";"," ; ");
+            
+            
+            i++;
+        }
+        
+        
+        this.Cod= new String[100][100];
         
         
         
@@ -28,7 +40,7 @@ class Arquivador{
                 
                 
                 
-                teste[i][j]=token.nextToken();
+                Cod[i][j]=token.nextToken();
                 
                 
                 j++;
@@ -40,53 +52,34 @@ class Arquivador{
         }
         i=0;
         
-        lineas= new String[100][100];
         
-        
-        
-        
-        while(teste[i][j]!=null){
-            
-            while(teste[i][j]!=null){
-                
-                lineas[i][j]= teste[i][j].replace("="," = ");
-                
-                System.out.println(lineas[i][j]);
-                
-                
-                j++;
-                
-                
-            }
-            j=0;
-            
-            i++;
-        }
-        
-        
-        
-       
-        
-       
-        
-        
-        
-        
-        
-        
-        
-        
+   
         
     }
-
-
-
-
-
-
-
-
-
-
+    
+    
+    
+    
+    
+ 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 
 }
+
+
+
+
+
+
+
+
+
