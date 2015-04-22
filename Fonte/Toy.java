@@ -7,14 +7,12 @@ class Toy{
         Scanner s;
         Interpretador b;
         Arquivador a;
-        String linhas[] = new String[2000];
+        String linhas[] = new String[100];
         
         
         f = new File(args[0]);
        
         s = new Scanner(f);
-        
-        b = new Interpretador();
         
         a = new Arquivador();
         

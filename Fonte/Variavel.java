@@ -9,7 +9,7 @@ class Variavel{
     
     
     
-    public 
+    
     
     public Variavel(String N){
         

@@ -6,6 +6,11 @@ import java.lang.String;
 
 class Arquivador extends Interpretador{
     
+    
+    public String [][]Cod;
+    
+    public int i;
+    public int j;
  
 
     public void arquiva(String Linhas[]){
@@ -15,13 +20,19 @@ class Arquivador extends Interpretador{
         
         
         while(Linhas[i]!=null){
-            
+        
+    
             Linhas [i]= Linhas[i].replace("="," = ");
             Linhas [i]= Linhas[i].replace(")"," ) ");
             Linhas [i]= Linhas[i].replace("("," ( ");
             Linhas [i]= Linhas[i].replace("{"," { ");
             Linhas [i]= Linhas[i].replace("}"," } ");
-            Linhas [i]=Linhas[i].replace(";"," ; ");
+            Linhas [i]= Linhas[i].replace("<"," < ");
+            Linhas [i]= Linhas[i].replace(">"," > ");
+            Linhas [i]= Linhas[i].replace(";"," ; ");
+            
+            
+           
             
             
             i++;
@@ -30,27 +41,63 @@ class Arquivador extends Interpretador{
         
         this.Cod= new String[100][100];
         
+        int k=0;
         
-        
-        for(i=0;i<5;i++){
+        for(i=0;i<9;i++){
             
-            StringTokenizer token=new StringTokenizer(Linhas[i]);
+            
+            while(Linhas[i].isEmpty()){
+                
+                i++;
+                
+            }
+            
+            
+            
+            StringTokenizer token= new StringTokenizer(Linhas[i]);
+            
             
             while(token.hasMoreTokens()){
                 
                 
                 
-                Cod[i][j]=token.nextToken();
+                Cod[k][j]=token.nextToken();
                 
                 
                 j++;
                 
             }
-            
+            k++;
             j=0;
             
         }
         i=0;
+        
+      
+       
+        while(Cod[i][j]!=null){
+            
+            while(Cod[i][j]!=null){
+                
+                
+                System.out.println(Cod[i][j]);
+                j++;
+                
+                
+            }
+
+            j=0;
+            i++;
+            
+            
+        }
+        
+        
+        
+      
+        
+    
+        
         
         
    

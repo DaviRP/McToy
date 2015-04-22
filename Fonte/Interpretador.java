@@ -5,51 +5,37 @@ import java.util.Scanner;
 
 class Interpretador{
     
-    public String Cod[][];
+    public String [][]Cod;
     
-    private int i;
-    private int j;
+    public int i;
+    public int j;
     
-    public Variavel Vars[]=new Variavel[10];
     
     
     
 
+    
+    
     public void interpreta() {
         
         
         
-        Variavel v
-      
-        
-        while(this.Cod[i][j]!=null){
-            
-            
-           
-            if(this.Cod[i][j].contains("$")){
-                
-                
-                
-               
-                
-                
-            }
+        if(this.Cod[i][j].contains("$")){
             
             
             
             
-            
-            
-            
-            
-            
-            
-            if(Cod[i][j].contains(";")){
-            i++;
-            }
         }
         
+        
+        
+        
+
     }
+    
+    
+    
+    
     
     //GETS E SETS
     public void setI(int x){
