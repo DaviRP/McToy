@@ -1,9 +1,9 @@
-class variavel{
+class Var{
 
 	private String nome;
 	private Double valor;
 
-	public variavel(String n){
+	public var(String n){
 
 		this.nome=n;
 		this.valor=0;
