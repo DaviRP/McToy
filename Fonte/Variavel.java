@@ -1,7 +1,7 @@
 class Variavel{
 
 
-    private String nome;
+    public String nome;
     private double valor;
     
     
@@ -18,6 +18,8 @@ class Variavel{
         
         
     }
+    
+
     
     
     

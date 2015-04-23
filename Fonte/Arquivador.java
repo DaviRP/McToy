@@ -7,11 +7,6 @@ import java.lang.String;
 class Arquivador extends Interpretador{
     
     
-    public String [][]Cod;
-    
-    public int i;
-    public int j;
- 
 
     public void arquiva(String Linhas[]){
         
@@ -74,7 +69,7 @@ class Arquivador extends Interpretador{
         i=0;
         
       
-       
+       /*
         while(Cod[i][j]!=null){
             
             while(Cod[i][j]!=null){
@@ -90,7 +85,7 @@ class Arquivador extends Interpretador{
             i++;
             
             
-        }
+        }*/
         
         
         
@@ -103,6 +98,9 @@ class Arquivador extends Interpretador{
    
         
     }
+    
+    
+    
     
     
     
