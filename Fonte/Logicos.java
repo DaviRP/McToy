@@ -4,40 +4,13 @@ class Logicos{
 
 
 
-    public DistribuidorOperacao(){
-        
-        
-        if(this.Cod[i][j].contains("=")){
-            
-            
-            
-            
-        }else if(this.Cod[i][j].contains("!=")){
-            
-            
-            
-            
-        }else if(this.Cod[i][j].contains("==")){
-            
-            
-        }else if(this.Cod[i][j].contains("<")){
-            
-            
-            
-        }else if(this.Cod[i][j].contains(">")){
-            
-            
-            
-            
-        }else if(this.Cod[i][j].contains("")){
-            
-            
-            
-            
-        }
-        
-        
-        
+    public void DistribuidorOperacao(){
+
+
+        System.out.println(Cod[i][j]);
+
+
+
     }
 
 
