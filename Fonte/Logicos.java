@@ -4,11 +4,17 @@ class Logicos{
 
 
 
-    public void DistribuidorOperacao(){
+    public void igual(Codigo Cod){
 
-
-        System.out.println(Cod[i][j]);
-
+        
+        if(Cod.variaveis[0].ExisteVar(Cod.Cod[Cod.i][Cod.j-1],Cod.variaveis)){
+            
+            System.out.println("aehooo");
+            
+            
+        }
+        
+       
 
 
     }
@@ -19,3 +25,5 @@ class Logicos{
 
 
 }
+    
+

@@ -4,13 +4,14 @@ import java.util.Scanner;
 import java.lang.String;
 
 
-class Arquivador extends Interpretador{
+class Arquivador{
     
     
 
-    public void arquiva(String Linhas[]){
+    public Codigo arquiva(String Linhas[]){
         
         int i=0,j=0;
+        Codigo Cod = new Codigo();
         
         
         
@@ -34,7 +35,7 @@ class Arquivador extends Interpretador{
         }
         
         
-        this.Cod= new String[100][100];
+        Cod.Cod= new String[100][100];
         
         int k=0;
         
@@ -56,7 +57,7 @@ class Arquivador extends Interpretador{
                 
                 
                 
-                Cod[k][j]=token.nextToken();
+                Cod.Cod[k][j]=token.nextToken();
                 
                 
                 j++;
@@ -69,29 +70,10 @@ class Arquivador extends Interpretador{
         i=0;
         
       
-       /*
-        while(Cod[i][j]!=null){
-            
-            while(Cod[i][j]!=null){
-                
-                
-                System.out.println(Cod[i][j]);
-                j++;
-                
-                
-            }
-
-            j=0;
-            i++;
-            
-            
-        }*/
         
+             
         
-        
-      
-        
-    
+        return Cod;
         
         
         

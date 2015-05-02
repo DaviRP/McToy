@@ -15,11 +15,33 @@ class Variavel{
 
         this.nome=N;
         this.valor=0;
-
-
     }
 
-    
+    public boolean ExisteVar(String nome,Variavel var[]){
+        
+        int k=0;
+        String aux=nome;
+        
+        if(aux.contains("$")){
+            
+            aux=aux.replace("$","");
+            
+        }
+
+        for(k=0;k < var.length;k++){
+            
+            if(var[k].nome.equals(aux)){
+                return true;
+            }
+        
+            
+        }
+        
+        
+        
+        return false;
+        
+    }
 
 
 
