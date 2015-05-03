@@ -11,26 +11,24 @@ class Interpretador{
 
     public void interpreta(Codigo Cod){
 
-        Cod.i=0;
-        Cod.j=0;
+      
 
-        int VarAux=0;
+     
         Logicos L=new Logicos();
+        
+       // Cod.ImprimeCodigo();
 
 
-
-
-
-        while(Cod.Cod[Cod.i][Cod.j]!=null){
+       
 
             while(Cod.Cod[Cod.i][Cod.j]!=null){
 
 
                 if(Cod.Cod[Cod.i][Cod.j].contains("$")){
 
-                   Cod.variaveis[VarAux]=new Variavel(Cod.Cod[Cod.i][Cod.j].replace("$",""));
+                   Cod.variaveis[Cod.VarAux]=new Variavel(Cod.Cod[Cod.i][Cod.j].replace("$",""));
                     
-                    VarAux++;
+                    Cod.VarAux++;
                     Cod.j++;
 
                 }
@@ -38,20 +36,32 @@ class Interpretador{
                 if(Cod.Cod[Cod.i][Cod.j].contains("=")){
                     
                    L.igual(Cod);
-                   
+                    Cod.j++;
+                    Cod.ImprimeVars();
 
                 }
+                
+                
+                
+                
+                if(Cod.Cod[Cod.i][Cod.j].equals(";")){
+                    
+                    Cod.j=0;
+                    Cod.i++;
+                    
+                    
+                    
+                }else{
 
 
                 Cod.j++;
                 
-
+                }
 
 
 
             }
-            Cod.j=0;
-            Cod.i++;
+        
 
 
 
@@ -65,7 +75,7 @@ class Interpretador{
 
 
 
-    }
+    
     
     
  

@@ -5,6 +5,7 @@ class Codigo{
     public int j;
 
     public Variavel []variaveis=new Variavel[100];
+    public int VarAux;
     
 
 
@@ -36,8 +37,45 @@ class Codigo{
          }
 
         
+    }
+    public int indiceVar(String Nome){
+        
+        String aux=Nome;
+        
+        if(aux.contains("$")){
+            
+            aux=aux.replace("$","");
+            
+            
+        }
+        
+        int k;
+        
+        for(k=0;k<this.VarAux;k++){
+            
+            if(variaveis[k].nome.equals(aux)){
+                
+                return k;
+            }
+            
+        }
         
         
+        return -1;
+        
+    }
+    
+    
+    public void ImprimeVars(){
+        
+        int i;
+        
+        for(i=0;i<this.VarAux;i++){
+            
+            System.out.println(this.variaveis[i].nome + ":" + this.variaveis[i].valor);
+            
+            
+        }
         
         
     }
