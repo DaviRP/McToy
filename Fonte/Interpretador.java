@@ -17,11 +17,20 @@ class Interpretador{
         Logicos L=new Logicos();
         
        // Cod.ImprimeCodigo();
+        Fluxo F= new Fluxo();
 
 
        
 
             while(Cod.Cod[Cod.i][Cod.j]!=null){
+                
+                
+                if(Cod.Cod[Cod.i][Cod.j].equals("end") || Cod.Cod[Cod.i][Cod.j].equals("}")  ){
+                    
+                    break;
+                    
+                    
+                }
 
 
                 if(Cod.Cod[Cod.i][Cod.j].contains("$")){
@@ -32,19 +41,23 @@ class Interpretador{
                     Cod.j++;
 
                 }
+                 
 
-                if(Cod.Cod[Cod.i][Cod.j].contains("=")){
+                if(Cod.Cod[Cod.i][Cod.j].contains("=") || Cod.Cod[Cod.i][Cod.j].contains("<") ){
                     
-                   L.igual(Cod);
+                    L.DistribuidorLogico(Cod);
                     Cod.j++;
-                    Cod.ImprimeVars();
+                    
 
                 }
                 
+                if(Cod.Cod[Cod.i][Cod.j].contains("True?")){
+                    
+                    F.True(Cod);
+                    
+                }
                 
-                
-                
-                if(Cod.Cod[Cod.i][Cod.j].equals(";")){
+                if(Cod.Cod[Cod.i][Cod.j].contains(";")){
                     
                     Cod.j=0;
                     Cod.i++;
@@ -62,7 +75,7 @@ class Interpretador{
 
             }
         
-
+           //Cod.ImprimeVars();
 
 
 

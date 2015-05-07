@@ -1,6 +1,38 @@
 
 class Logicos{
     
+    
+    
+    
+    
+    public boolean DistribuidorLogico(Codigo Cod){
+        
+        
+        if(Cod.Cod[Cod.i][Cod.j].contains("=")){
+            
+            this.igual(Cod);
+            
+            
+            
+            
+            
+            
+        }else if(Cod.Cod[Cod.i][Cod.j].contains("<")){
+            
+            
+            return this.menorQ(Cod);
+            
+            
+        
+        }
+        
+        
+        
+        
+        return false;
+        
+        
+    }
 
 
 
@@ -47,18 +79,78 @@ class Logicos{
                     
                     
                     
-                }
-        
-       
-
-
+            }
     }
+    
+    public boolean menorQ(Codigo Cod){
+        
+        
+        int Indi1 = Cod.indiceVar(Cod.Cod[Cod.i][Cod.j-1]);
+        int Indi2  = Cod.indiceVar(Cod.Cod[Cod.i][Cod.j+1]);
+            
+            
+        if(Indi1!=-1 && Indi2 !=-1){
+            
+            if(Cod.variaveis[Indi1].valor < Cod.variaveis[Indi2].valor){
+                
+                return true;
+        }else{
+                return false;
+            }
+            
+            
+        
+        }else if(Indi1 == -1 && Indi2 !=-1){
+            
+            double valor1 = Double.parseDouble(Cod.Cod[Cod.i][Cod.j-1]);
+                                               
+            if(valor1 < Cod.variaveis[Indi2].valor){
+                
+                return true;
+                
+            }else{
+                return false;
+                    
+                }
+            
+                                               
+            
+                                               
+                    
+            }else if(Indi1!=-1 && Indi2==-1){
+                
+                double valor2 = Double.parseDouble(Cod.Cod[Cod.i][Cod.j+1]);
+                                                   
+                if(valor2 > Cod.variaveis[Indi1].valor){
+                    
+                        return true;
+                                                       
+                }else{
+                        return false;
+                                                       
+                }
 
-
-
-
-
-
+                
+                
+                                                   
+                }else{
+                    
+                    double valor1 = Double.parseDouble(Cod.Cod[Cod.i][Cod.j-1]);
+                    double valor2 = Double.parseDouble(Cod.Cod[Cod.i][Cod.j+1]);
+                                                       
+                    if(valor1 < valor2){
+                        
+                        return true;
+                                                           
+                    }else{
+                        return false;
+                    }
+                    
+            }
+                    
+                                                       
+    }
+    
 }
     
 

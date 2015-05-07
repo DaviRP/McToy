@@ -20,6 +20,8 @@ class Codigo{
         
         
          while(this.Cod[k][q]!=null){
+             
+             System.out.println("linha "+k);
          
              while(this.Cod[k][q]!=null){
          

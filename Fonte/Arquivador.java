@@ -13,9 +13,7 @@ class Arquivador{
         int i=0,j=0;
         Codigo Cod = new Codigo();
         
-        
-        
-        while(Linhas[i]!=null){
+     while(Linhas[i]!=null){
         
     
             Linhas [i]= Linhas[i].replace("="," = ");
@@ -26,6 +24,7 @@ class Arquivador{
             Linhas [i]= Linhas[i].replace("<"," < ");
             Linhas [i]= Linhas[i].replace(">"," > ");
             Linhas [i]= Linhas[i].replace(";"," ; ");
+            Linhas [i]= Linhas[i].replace("-"," - ");
             
             
            
@@ -39,15 +38,16 @@ class Arquivador{
         
         int k=0;
         
-        for(i=0;i<9;i++){
+        for(i=0;i<Linhas.length;i++){
             
             
-            while(Linhas[i].isEmpty()){
+            
+            while(Linhas[i].trim().isEmpty()){
                 
                 i++;
                 
             }
-            
+           
             
             
             StringTokenizer token= new StringTokenizer(Linhas[i]);
@@ -63,16 +63,23 @@ class Arquivador{
                 j++;
                 
             }
+            if(Linhas[i].contains("end")){
+                break;
+                
+            }
             k++;
             j=0;
             
         }
-        i=0;
         
-      
+        
+        
+        
+     
         
              
-        
+        Cod.i=0;
+        Cod.j=0;
         return Cod;
         
         
