@@ -4,17 +4,16 @@ import java.util.Scanner;
 import java.lang.String;
 
 
-class Arquivador extends Interpretador{
+class Arquivador{
     
     
 
-    public void arquiva(String Linhas[]){
+    public Codigo arquiva(String Linhas[]){
         
         int i=0,j=0;
+        Codigo Cod = new Codigo();
         
-        
-        
-        while(Linhas[i]!=null){
+     while(Linhas[i]!=null){
         
     
             Linhas [i]= Linhas[i].replace("="," = ");
@@ -25,6 +24,7 @@ class Arquivador extends Interpretador{
             Linhas [i]= Linhas[i].replace("<"," < ");
             Linhas [i]= Linhas[i].replace(">"," > ");
             Linhas [i]= Linhas[i].replace(";"," ; ");
+            Linhas [i]= Linhas[i].replace("-"," - ");
             
             
            
@@ -34,19 +34,20 @@ class Arquivador extends Interpretador{
         }
         
         
-        this.Cod= new String[100][100];
+        Cod.Cod= new String[100][100];
         
         int k=0;
         
-        for(i=0;i<9;i++){
+        for(i=0;i<Linhas.length;i++){
             
             
-            while(Linhas[i].isEmpty()){
+            
+            while(Linhas[i].trim().isEmpty()){
                 
                 i++;
                 
             }
-            
+           
             
             
             StringTokenizer token= new StringTokenizer(Linhas[i]);
@@ -56,42 +57,30 @@ class Arquivador extends Interpretador{
                 
                 
                 
-                Cod[k][j]=token.nextToken();
+                Cod.Cod[k][j]=token.nextToken();
                 
                 
                 j++;
+                
+            }
+            if(Linhas[i].contains("end")){
+                break;
                 
             }
             k++;
             j=0;
             
         }
-        i=0;
-        
-      
-       /*
-        while(Cod[i][j]!=null){
-            
-            while(Cod[i][j]!=null){
-                
-                
-                System.out.println(Cod[i][j]);
-                j++;
-                
-                
-            }
-
-            j=0;
-            i++;
-            
-            
-        }*/
         
         
         
-      
         
-    
+     
+        
+             
+        Cod.i=0;
+        Cod.j=0;
+        return Cod;
         
         
         

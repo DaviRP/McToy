@@ -5,10 +5,10 @@ class Toy{
     public static void main(String args[]) throws Exception {
         File f;
         Scanner s;
-        Interpretador b;
+        Interpretador I;
         Arquivador a;
         String linhas[] = new String[100];
-        
+        int count;
         
         f = new File(args[0]);
        
@@ -16,14 +16,17 @@ class Toy{
         
         a = new Arquivador();
         
-               int i = 0;
+        I =new Interpretador();
+        
+        count=0;
+        
         while(s.hasNext()) {
-            linhas[i] = s.nextLine();
-            i++;
+            linhas[count] = s.nextLine();
+            count++;
         }
         
-        a.arquiva(linhas);
-        a.interpreta();
+        
+        I.interpreta(a.arquiva(linhas));
         
         
     }

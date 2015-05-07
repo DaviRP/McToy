@@ -4,115 +4,98 @@ import java.util.Scanner;
 
 
 class Interpretador{
-    
-    public String [][]Cod;
-    
-    public int i;
-    public int j;
-    
-    
-    public Variavel []variaveis=new Variavel[10];
-    
-    public Logico logic=new Logico();
-    
-    
-    
-    public void interpreta() {
-        
-        this.i=0;
-        this.j=0;
-        
-        int VarAux=0;
-        
-     
-        
-        
-        
-     /*   while(Cod[i][j]!=null){
-            
-            while(Cod[i][j]!=null){
-                
-                
-                System.out.println(Cod[i][j]);
-                j++;
-                
-                
-            }
-            
-            j=0;
-            i++;
-            
-            
-        }*/
-        i=0;
-        j=0;
-        
-        
-     
-        while(Cod[i][j]!=null){
-            
-            while(Cod[i][j]!=null){
-                
-                
-                if(Cod[i][j].contains("$")){
-                    
-                   this.variaveis[VarAux]=new Variavel(Cod[i][j].replace("$",""));
-                    System.out.println(this.variaveis[VarAux].nome);
 
-                    VarAux++;
-                    j++;
+    
+
+
+
+    public void interpreta(Codigo Cod){
+
+      
+
+     
+        Logicos L=new Logicos();
+        
+       // Cod.ImprimeCodigo();
+        Fluxo F= new Fluxo();
+
+
+       
+
+            while(Cod.Cod[Cod.i][Cod.j]!=null){
+                
+                
+                if(Cod.Cod[Cod.i][Cod.j].equals("end") || Cod.Cod[Cod.i][Cod.j].equals("}")  ){
                     
-                }else{
+                    break;
                     
-                    j++;
+                    
+                }
+
+
+                if(Cod.Cod[Cod.i][Cod.j].contains("$")){
+
+                   Cod.variaveis[Cod.VarAux]=new Variavel(Cod.Cod[Cod.i][Cod.j].replace("$",""));
+                    
+                    Cod.VarAux++;
+                    Cod.j++;
+
+                }
+                 
+
+                if(Cod.Cod[Cod.i][Cod.j].contains("=") || Cod.Cod[Cod.i][Cod.j].contains("<") ){
+                    
+                    L.DistribuidorLogico(Cod);
+                    Cod.j++;
+                    
+
                 }
                 
+                if(Cod.Cod[Cod.i][Cod.j].contains("True?")){
+                    
+                    F.True(Cod);
+                    
+                }
                 
+                if(Cod.Cod[Cod.i][Cod.j].contains(";")){
+                    
+                    Cod.j=0;
+                    Cod.i++;
+                    
+                    
+                    
+                }else{
+
+
+                Cod.j++;
                 
-                
+                }
+
+
+
             }
-            j=0;
-            i++;
-            
-            
-            
-            
-            
-            
+        
+           //Cod.ImprimeVars();
+
+
+
+
+
         }
-        
-        
-      
+
+
+
+
+
+
     
     
     
-    }
-    
-    //GETS E SETS
-    public void setI(int x){
-        
-        this.i=x;
-        
-        
-    }
-    
-    public int getI(){
-        
-        
-        return this.i;
-        
-    }
-    
-    public void setJ(int y){
-        
-        this.j=y;
-        
-    }
-    public int getJ(){
-        
-        return this.j;
-        
-    }
+ 
+
     
     
+    
+
+
 }
