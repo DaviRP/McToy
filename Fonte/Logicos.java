@@ -9,10 +9,14 @@ class Logicos{
         
         
         if(Cod.Cod[Cod.i][Cod.j].contains("=")){
-            
+            if(Cod.Cod[Cod.i][Cod.j+2].contains(";")){
+                
             this.igual(Cod);
             
-            
+            }else{
+                //ATRIBUICAO RESULTANTE DE UM OPERACAO MATEMATICA
+                
+            }
             
             
             
