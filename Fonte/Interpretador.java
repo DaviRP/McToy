@@ -18,19 +18,38 @@ class Interpretador{
         
         //Cod.ImprimeCodigo();
         Fluxo F= new Fluxo();
-
+        Laco Lc =new Laco();
+        Amostra A=new Amostra();
 
        
 
             while(Cod.Cod[Cod.i][Cod.j]!=null){
                 
                 
-                if(Cod.Cod[Cod.i][Cod.j].equals("end") ){
+               
+                
+                if(Lc.state!=0 && Lc.state!=-1){
                     
-                    break;
+                    if(Cod.Cod[Cod.i][Cod.j].contains("{")){
+                        Lc.state++;
+                    }
+                    if(Cod.Cod[Cod.i][Cod.j].contains("}")){
+                        
+                        Lc.state--;
+                    }
                     
                     
                 }
+                if(Cod.Cod[Cod.i][Cod.j].contains("}") && Lc.state==0){
+                    
+                    Cod.i=Lc.flipI;
+                    Cod.j=Lc.flipJ;
+                    
+                    Lc.Flip(Cod);
+                    
+                    
+                }
+                
 
 
                 if(Cod.Cod[Cod.i][Cod.j].contains("$")){
@@ -40,6 +59,11 @@ class Interpretador{
                     Cod.VarAux++;
                     Cod.j++;
 
+                }
+                if(Cod.Cod[Cod.i][Cod.j].contains("Amostra.O")){
+                    
+                    A.Amostrador(Cod);
+                    
                 }
                  
 
@@ -56,8 +80,25 @@ class Interpretador{
                     F.True(Cod);
                     
                 }
+                if(Cod.Cod[Cod.i][Cod.j].contains("Flip")){
+                    
+                    Lc.Flip(Cod);
+                    
+                }
                 
-                if(Cod.Cod[Cod.i][Cod.j].contains(";") || Cod.Cod[Cod.i][Cod.j]==null || Cod.Cod[Cod.i][Cod.j].contains("{") || Cod.Cod[Cod.i][Cod.j].contains("}")){
+                if(Cod.Cod[Cod.i][Cod.j].equals("end") ){
+                    
+                    break;
+                    
+                    
+                }
+                
+                
+                
+                
+                
+                if(Cod.Cod[Cod.i][Cod.j].contains(";") ||Cod.Cod[Cod.i][Cod.j].contains("{")  ||  Cod.Cod[Cod.i][Cod.j].contains("}")){
+                    
                     
                     Cod.j=0;
                     Cod.i++;

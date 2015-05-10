@@ -17,7 +17,9 @@ class Matematica{
                 this.somador(Cod);
                 
                 
-            }else if(Cod.Cod[Cod.i][Cod.j].contains("-")){
+            }else if(Cod.Cod[Cod.i][Cod.j].contains("^")){
+                
+                this.subtrair(Cod);
             
             
             
@@ -31,6 +33,7 @@ class Matematica{
             
         
             }else if(Cod.Cod[Cod.i][Cod.j].contains("/")){
+                this.divisor(Cod);
             
             
             
@@ -112,7 +115,55 @@ class Matematica{
         
         
     }
+    
+    public void divisor(Codigo Cod){
         
+        Cod.j++;
+        
+        if(Cod.indiceVar(Cod.Cod[Cod.i][Cod.j])!=-1){
+            
+            
+            this.value /= Cod.variaveis[Cod.indiceVar(Cod.Cod[Cod.i][Cod.j])].valor;
+            
+            
+            
+        }else{
+            
+            this.value /= Double.parseDouble(Cod.Cod[Cod.i][Cod.j]);
+            
+            
+        }
+        
+        
+        
+        
+        
+        
+        
+        
+    }
+    
+    public void subtrair(Codigo Cod){
+        
+        Cod.j++;
+        
+        
+        if(Cod.indiceVar(Cod.Cod[Cod.i][Cod.j])!=-1){
+            
+            
+            this.value -=Cod.variaveis[Cod.indiceVar(Cod.Cod[Cod.i][Cod.j])].valor;
+            
+            
+            
+        }else{
+            
+            this.value -=Double.parseDouble(Cod.Cod[Cod.i][Cod.j]);
+            
+        }
+        
+        
+        
+    }
         
         
         

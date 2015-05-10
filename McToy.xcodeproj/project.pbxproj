@@ -23,6 +23,8 @@
 		08BCBC201AD5692C001582C8 /* Toy.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = Toy.java; sourceTree = "<group>"; };
 		08BCBC211AD59D3A001582C8 /* Interpretador.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = Interpretador.java; sourceTree = "<group>"; };
 		08BCBC221AD59DD7001582C8 /* teste.Toy */ = {isa = PBXFileReference; lastKnownFileType = text; path = teste.Toy; sourceTree = "<group>"; };
+		08CB7D701AFFD999007EA6BE /* Laco.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = Laco.java; sourceTree = "<group>"; };
+		08CB7D711AFFFDFC007EA6BE /* Amostra.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = Amostra.java; sourceTree = "<group>"; };
 		08EA67E21AE2876F00028556 /* Arquivador.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = Arquivador.java; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -72,6 +74,7 @@
 			children = (
 				08BCBC201AD5692C001582C8 /* Toy.java */,
 				08BCBC221AD59DD7001582C8 /* teste.Toy */,
+				08CB7D711AFFFDFC007EA6BE /* Amostra.java */,
 				08EA67E21AE2876F00028556 /* Arquivador.java */,
 				08BCBC211AD59D3A001582C8 /* Interpretador.java */,
 				087FDE7B1AF3F526001BD252 /* Codigo.java */,
@@ -79,6 +82,7 @@
 				0822E4D21AFCF712007D62AA /* Matematica.java */,
 				0829296B1AE534BE009CB50E /* Variavel.java */,
 				088BA7D71AFB84B100377F44 /* Fluxo.java */,
+				08CB7D701AFFD999007EA6BE /* Laco.java */,
 			);
 			path = Fonte;
 			sourceTree = "<group>";

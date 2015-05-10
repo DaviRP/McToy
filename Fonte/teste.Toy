@@ -1,7 +1,9 @@
 
-$s;
-$i=10;
-s=i+2*10;
+$s=5;
+$i=10+2+7;
+
+Amostra.O( la la la la $s la la);
+
 
 end
 
