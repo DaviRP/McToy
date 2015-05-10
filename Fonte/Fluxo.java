@@ -6,39 +6,43 @@ class Fluxo{
     public void True(Codigo Cod){
         
         Logicos L=new Logicos();
-        Interpretador I=new Interpretador();
+       
         Cod.j++;
         boolean expre=false;
         
-        if(Cod.Cod[Cod.i][Cod.j].equals("(")){
+        if(Cod.Cod[Cod.i][Cod.j].contains("(")){
             
-            
-            while(Cod.Cod[Cod.i][Cod.j]!=null){
-                
-                Cod.j++;
+            Cod.j+=2;
+                       
                expre = L.DistribuidorLogico(Cod);
                 
                 
-                if(Cod.Cod[Cod.i][Cod.j].equals("{")){
-                    
-                    break;
-                }
-                
-                
-                
-                
-            }
-            
+              
             if(expre){
                 
                 
-                I.interpreta(Cod);
-                    
-                    
+                //NAO FAZ NADA, MAS PODERIA CHAMAR INTERPRETA NOVAMENTE.
+                
                     
                     
             }else{
                 
+                while(Cod.Cod[Cod.i][Cod.j]!=null){
+                    
+                    if(Cod.Cod[Cod.i][Cod.j].contains("{")){
+                        break;
+                    }
+                    if(Cod.Cod[Cod.i][Cod.j]==null){
+                        Cod.i++;
+                        Cod.j=0;
+                        
+                    }else{
+                        Cod.j++;
+                    }
+                    
+                    
+                }
+            
                 while(Cod.Cod[Cod.i][Cod.j]!=null){
                     
                     if(Cod.Cod[Cod.i][Cod.j].contains("{")){
@@ -47,6 +51,9 @@ class Fluxo{
                     if(Cod.Cod[Cod.i][Cod.j].contains("}")){
                         
                         this.state--;
+                    }
+                    if(this.state==0){
+                        break;
                     }
                     
                     if(Cod.Cod[Cod.i][Cod.j].equals(";") || Cod.Cod[Cod.i][Cod.j].equals("{") || Cod.Cod[Cod.i][Cod.j].equals("}")){

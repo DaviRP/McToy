@@ -16,7 +16,7 @@ class Interpretador{
      
         Logicos L=new Logicos();
         
-       // Cod.ImprimeCodigo();
+        //Cod.ImprimeCodigo();
         Fluxo F= new Fluxo();
 
 
@@ -25,7 +25,7 @@ class Interpretador{
             while(Cod.Cod[Cod.i][Cod.j]!=null){
                 
                 
-                if(Cod.Cod[Cod.i][Cod.j].equals("end") || Cod.Cod[Cod.i][Cod.j].equals("}")  ){
+                if(Cod.Cod[Cod.i][Cod.j].equals("end") ){
                     
                     break;
                     
@@ -43,7 +43,7 @@ class Interpretador{
                 }
                  
 
-                if(Cod.Cod[Cod.i][Cod.j].contains("=") || Cod.Cod[Cod.i][Cod.j].contains("<") ){
+                if(Cod.Cod[Cod.i][Cod.j].contains("=")){
                     
                     L.DistribuidorLogico(Cod);
                     Cod.j++;
@@ -57,7 +57,7 @@ class Interpretador{
                     
                 }
                 
-                if(Cod.Cod[Cod.i][Cod.j].contains(";")){
+                if(Cod.Cod[Cod.i][Cod.j].contains(";") || Cod.Cod[Cod.i][Cod.j]==null || Cod.Cod[Cod.i][Cod.j].contains("{") || Cod.Cod[Cod.i][Cod.j].contains("}")){
                     
                     Cod.j=0;
                     Cod.i++;
@@ -75,7 +75,7 @@ class Interpretador{
 
             }
         
-           //Cod.ImprimeVars();
+           Cod.ImprimeVars();
 
 
 

@@ -24,7 +24,7 @@ class Logicos{
         }else if(Cod.Cod[Cod.i][Cod.j].contains("<")){
             
             
-            return this.menorQ(Cod);
+            return menorQ(Cod);
             
             
         
