@@ -14,7 +14,9 @@ class Logicos{
             this.igual(Cod);
             
             }else{
-                //ATRIBUICAO RESULTANTE DE UM OPERACAO MATEMATICA
+                Matematica M=new Matematica();
+                
+                Cod.variaveis[Cod.indiceVar(Cod.Cod[Cod.i][Cod.j-1])].valor=M.DistribuidorMatematico(Cod);
                 
             }
             
