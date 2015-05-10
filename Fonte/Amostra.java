@@ -8,11 +8,11 @@ class Amostra{
         
         
         String S=new String();
-       Cod.j++;
+        Cod.j++;
         
-        while(Cod.Cod[Cod.i][Cod.j].contains(")")==true){
+        while(Cod.Cod[Cod.i][Cod.j].contains(";")!=true){
         
-            Cod.j++;
+            
     
             if(Cod.indiceVar(Cod.Cod[Cod.i][Cod.j])!=1 && Cod.Cod[Cod.i][Cod.j].contains("$")){
                 
@@ -25,6 +25,7 @@ class Amostra{
                 S += Cod.Cod[Cod.i][Cod.j];
                 
             }
+            Cod.j++;
         }
         
       
