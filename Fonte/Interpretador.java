@@ -20,6 +20,7 @@ class Interpretador{
         Fluxo F= new Fluxo();
         Laco Lc =new Laco();
         Amostra A=new Amostra();
+        Scan Scn=new Scan();
 
        
 
@@ -63,6 +64,12 @@ class Interpretador{
                 if(Cod.Cod[Cod.i][Cod.j].contains("Amostra.O")){
                     
                     A.Amostrador(Cod);
+                    
+                }
+                if(Cod.Cod[Cod.i][Cod.j].contains("Value.In")){
+                    
+                    Scn.Entrada(Cod);
+                    
                     
                 }
                  

@@ -2,7 +2,10 @@
 $s=5;
 $i=10+2+7;
 
-Amostra.O  la la la la $s la la;
+
+Value.In $s;
+
+Amostra.O  variavel S: $s;
 
 
 end

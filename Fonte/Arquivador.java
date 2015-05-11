@@ -31,6 +31,7 @@ class Arquivador{
             Linhas [i]= Linhas[i].replace("Amostra.O"," Amostra.O ");
             Linhas [i]= Linhas[i].replace("True?"," True? ");
             Linhas [i]= Linhas[i].replace("Flip"," Flip ");
+            Linhas [i]= Linhas[i].replace("Value.In"," Value.In ");
          
            
             
