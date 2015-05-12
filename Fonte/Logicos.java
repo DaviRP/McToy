@@ -30,6 +30,21 @@ class Logicos{
             
             
         
+        }else if(Cod.Cod[Cod.i][Cod.j].contains(">")){
+            
+            if(menorQ(Cod)==false){
+                
+                return true;
+                
+                
+            }else{
+                
+                return false;
+                
+            }
+            
+            
+            
         }
         
         

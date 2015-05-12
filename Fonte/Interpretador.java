@@ -15,8 +15,6 @@ class Interpretador{
 
      
         Logicos L=new Logicos();
-        
-        //Cod.ImprimeCodigo();
         Fluxo F= new Fluxo();
         Laco Lc =new Laco();
         Amostra A=new Amostra();
@@ -29,27 +27,7 @@ class Interpretador{
                 
                
                 
-                if(Lc.state!=0 && Lc.state!=-1){
-                    
-                    if(Cod.Cod[Cod.i][Cod.j].contains("{")){
-                        Lc.state++;
-                    }
-                    if(Cod.Cod[Cod.i][Cod.j].contains("}")){
-                        
-                        Lc.state--;
-                    }
-                    
-                    
-                }
-                if(Cod.Cod[Cod.i][Cod.j].contains("}") && Lc.state==0){
-                    
-                    Cod.i=Lc.flipI;
-                    Cod.j=Lc.flipJ;
-                    
-                    Lc.Flip(Cod);
-                    
-                    
-                }
+                
                 
 
 
@@ -99,16 +77,44 @@ class Interpretador{
                     
                     
                 }
+              
                 
                 
                 
                 
                 
                 if(Cod.Cod[Cod.i][Cod.j].contains(";") ||Cod.Cod[Cod.i][Cod.j].contains("{")  ||  Cod.Cod[Cod.i][Cod.j].contains("}")){
+                   
+                    if(Cod.Looping  > 0 ){
+                        
+                        if(Cod.Cod[Cod.i][Cod.j].contains("}")){
+                            
+                            Cod.Looping--;
+                            
+                        }else if(Cod.Cod[Cod.i][Cod.j].contains("{") ){
+                            Cod.Looping++;
+                            
+                            
+                        }
+                        if(Cod.Looping == 0){
+                            
+                            Cod.i = Lc.flipI;
+                            Cod.j =Lc.flipJ;
+                            Lc.Flip(Cod);
+                            
+                            
+                            
+                        }
+                                                 
+                        
+                    }
+                    else{
+                        Cod.j=0;
+                        Cod.i++;
+                        
+                    }
                     
-                    
-                    Cod.j=0;
-                    Cod.i++;
+                   
                     
                     
                     
@@ -123,7 +129,7 @@ class Interpretador{
 
             }
         
-           Cod.ImprimeVars();
+        
 
 
 

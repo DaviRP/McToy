@@ -1,12 +1,8 @@
 
-$s=5;
-$i=10+2+7;
+$a=1;
 
-
-Value.In $s;
-
-Amostra.O  variavel S: $s;
-
+  
+    Amostra.O $a;
 
 end
 

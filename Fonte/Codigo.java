@@ -7,6 +7,9 @@ class Codigo{
     public Variavel []variaveis=new Variavel[100];
     public int VarAux;
     
+    
+    public int Looping;
+    
 
 
     

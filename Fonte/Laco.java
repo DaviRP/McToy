@@ -1,13 +1,10 @@
 class Laco{
 
 
-    int state=-1;
+   // int state=-1;
     
     int flipI;
     int flipJ;
-    
-    
-    
     
     public void Flip(Codigo Cod){
         
@@ -28,32 +25,33 @@ class Laco{
             expre=L.DistribuidorLogico(Cod);
             
             
+        
+              
             if(expre){
-                
-                while(Cod.Cod[Cod.i][Cod.j]!=null){
                     
-                    if(Cod.Cod[Cod.i][Cod.j].contains("{")){
-                        this.state=1;
-                        break;
+                    
+                    
+                    while(Cod.Cod[Cod.i][Cod.j]!=null){
+                    
+                        if(Cod.Cod[Cod.i][Cod.j].contains("{")){
                         
-                        
-                    }else{
-                        Cod.j++;
+                            Cod.Looping=1;
+                            
+                            break;
+                        }
                     }
+                
+                    
                         
-                }
-                
-                I.interpreta(Cod);
-               
-                
-
+                    
+                    
                 
             }else{
                 
                 while(Cod.Cod[Cod.i][Cod.j]!=null){
                     
                     if(Cod.Cod[Cod.i][Cod.j].contains("{")){
-                        this.state=0;
+                        Cod.Looping=0;
                         break;
                     }else{
                         Cod.j++;
@@ -66,18 +64,18 @@ class Laco{
                     
                     if(Cod.Cod[Cod.i][Cod.j].contains("{")){
                         
-                       this.state++;
+                        Cod.Looping++;
                         
                     }
                     if(Cod.Cod[Cod.i][Cod.j].contains("}")){
                         
-                        this.state--;
+                        Cod.Looping--;
                         
                     }
                     
                     if(Cod.Cod[Cod.i][Cod.j].contains(";") || Cod.Cod[Cod.i][Cod.j].contains("{") || Cod.Cod[Cod.i][Cod.j].contains("}")){
                         
-                        if(this.state==0){
+                        if(Cod.Looping==0){
                             break;
                             
                         }
