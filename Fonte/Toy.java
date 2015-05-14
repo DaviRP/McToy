@@ -1,5 +1,11 @@
+//Codigo responsavel pela leitura dos arquivos de extencao .Toy
+//para execurar arquivos .Toy no termina basta seguir o exemplo :
+//.: java Toy NomeDoArquivo.Toy
+
+
 import java.util.Scanner;
 import java.io.*;
+
 
 class Toy{
     public static void main(String args[]) throws Exception {

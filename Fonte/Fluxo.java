@@ -21,7 +21,7 @@ class Fluxo{
             if(expre){
                 
                 
-                //NAO FAZ NADA, MAS PODERIA CHAMAR INTERPRETA NOVAMENTE.
+                //Volta para a classe que o chamou
                 
                     
                     

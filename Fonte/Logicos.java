@@ -1,106 +1,51 @@
-
+//Classe de Responsalvel pela avalicao de exprecoes com valores
+//logicos usadas em controle de fluxo e atribuicoes.:
 class Logicos{
     
-    
-    
-    
-    
-    public boolean DistribuidorLogico(Codigo Cod){
-        
+    public boolean DistribuidorLogico(Codigo Cod){//Classe principal de distruicao de Exprecoes, apenas retorna valore Booleanos
         
         if(Cod.Cod[Cod.i][Cod.j].contains("=")){
-            if(Cod.Cod[Cod.i][Cod.j+2].contains(";")){
+            if(Cod.Cod[Cod.i][Cod.j+2].contains(";")){//Em caso de atribuicao normal
                 
             this.igual(Cod);
             
-            }else{
+            }else{//Em caso de atribuicao com exprecoes matematicas
                 Matematica M=new Matematica();
                 
                 Cod.variaveis[Cod.indiceVar(Cod.Cod[Cod.i][Cod.j-1])].valor=M.DistribuidorMatematico(Cod);
-                
             }
-            
-            
-            
             
         }else if(Cod.Cod[Cod.i][Cod.j].contains("<")){
             
-            
             return menorQ(Cod);
             
-            
-        
         }else if(Cod.Cod[Cod.i][Cod.j].contains(">")){
-            
+            //negando a saida do metodo "Menos que" para obter um "Maior que"
             if(menorQ(Cod)==false){
-                
                 return true;
-                
-                
-            }else{
-                
+                }else{
                 return false;
-                
             }
-            
-            
-            
         }
         
-        
-        
-        
-        return false;
-        
-        
+        return false;// restorna falso se a exprecao nao foi Compreendida ou usada com um simbolo invalido
     }
 
-
-
-
-
-    public void igual(Codigo Cod){
-
+    
+    public void igual(Codigo Cod){//Atribuicao simples com apenas um valor
         int Indice_recebe = Cod.indiceVar(Cod.Cod[Cod.i][Cod.j-1]);
-        
         if(Indice_recebe != -1){
             Cod.j++;
             int Indice_doadora = Cod.indiceVar(Cod.Cod[Cod.i][Cod.j]);
-            
             if(Indice_doadora != -1){
-                
                 Cod.variaveis[Indice_recebe].valor = Cod.variaveis[Indice_doadora].valor;
-                
-
-                
-                
-            }else{
-                
-                
+                }else{
                 Cod.variaveis[Indice_recebe].valor=Double.parseDouble(Cod.Cod[Cod.i][Cod.j]);
-                
-                
-                
-                
-                
-                
             }
-            
-            
-            
         }else{
                     
-                    
-            //ERRO AO RECEBER VARIAVEL
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-            }
+        //ERRO AO RECEBER VARIAVEL EROOOOOOOOOOOOOOO))()(;
+        }
     }
     
     public boolean menorQ(Codigo Cod){

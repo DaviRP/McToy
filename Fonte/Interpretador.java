@@ -4,10 +4,12 @@ import java.util.Scanner;
 
 
 class Interpretador{
-
     
-
-
+    
+    public boolean State = false;
+    public int Scope = 0;
+    
+    
 
     public void interpreta(Codigo Cod){
 
@@ -26,11 +28,6 @@ class Interpretador{
                 
                 
                
-                
-                
-                
-
-
                 if(Cod.Cod[Cod.i][Cod.j].contains("$")){
 
                    Cod.variaveis[Cod.VarAux]=new Variavel(Cod.Cod[Cod.i][Cod.j].replace("$",""));
@@ -77,6 +74,28 @@ class Interpretador{
                     
                     
                 }
+                
+                if(this.State==true){
+                    
+                    if(Cod.Cod[Cod.i][Cod.j].contains("{")){
+                        
+                        this.Scope++;
+                        
+                        
+                        
+                        
+                        
+                    }else if(Cod.Cod[Cod.i][Cod.j].contains("}")){
+                        
+                        this.Scope--;
+                        
+                    }
+                    
+                    if(this.Scope==0){
+                        break;
+                        
+                    }
+                }
               
                 
                 
@@ -85,43 +104,15 @@ class Interpretador{
                 
                 if(Cod.Cod[Cod.i][Cod.j].contains(";") ||Cod.Cod[Cod.i][Cod.j].contains("{")  ||  Cod.Cod[Cod.i][Cod.j].contains("}")){
                    
-                    if(Cod.Looping  > 0 ){
-                        
-                        if(Cod.Cod[Cod.i][Cod.j].contains("}")){
-                            
-                            Cod.Looping--;
-                            
-                        }else if(Cod.Cod[Cod.i][Cod.j].contains("{") ){
-                            Cod.Looping++;
-                            
-                            
-                        }
-                        if(Cod.Looping == 0){
-                            
-                            Cod.i = Lc.flipI;
-                            Cod.j =Lc.flipJ;
-                            Lc.Flip(Cod);
-                            
-                            
-                            
-                        }
-                                                 
-                        
-                    }
-                    else{
+                    
                         Cod.j=0;
                         Cod.i++;
                         
-                    }
-                    
-                   
-                    
-                    
                     
                 }else{
 
 
-                Cod.j++;
+                    Cod.j++;
                 
                 }
 

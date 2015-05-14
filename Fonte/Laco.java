@@ -1,17 +1,9 @@
 class Laco{
 
-
-   // int state=-1;
-    
     int flipI;
     int flipJ;
     
     public void Flip(Codigo Cod){
-        
-        
-        this.flipI=Cod.i;
-        this.flipJ=Cod.j;
-        
         
         Logicos L=new Logicos();
         Cod.j++;
@@ -28,30 +20,68 @@ class Laco{
         
               
             if(expre){
+                
+                this.flipI=Cod.i;
+                this.flipJ=Cod.j;
+                
+                while(expre){
                     
                     
+                    
+                
+                    I.State=true;
                     
                     while(Cod.Cod[Cod.i][Cod.j]!=null){
                     
                         if(Cod.Cod[Cod.i][Cod.j].contains("{")){
-                        
-                            Cod.Looping=1;
                             
                             break;
+                            
+                        }else if(Cod.Cod[Cod.i][Cod.j]==null){
+                            Cod.i++;
+                            Cod.j=0;
+                        }else{
+                            Cod.j++;
                         }
+                    
                     }
+                    
+                    if(Cod.Cod[Cod.i][Cod.j+1]==null){
+                        Cod.i++;
+                        Cod.j=0;
+                    }else{
+                        Cod.j++;
+                    }
+                    
+                    I.Scope++;
+                    
+                    I.interpreta(Cod);
+                    
+                    
+                    
+                    
+                    Cod.i=flipI;
+                    Cod.j=flipJ;
+                    
+                    expre = L.DistribuidorLogico(Cod);
+            
+                
+                
+                    
+                }
                 
                     
                         
                     
                     
                 
-            }else{
+            }
+            if(expre==false){
                 
                 while(Cod.Cod[Cod.i][Cod.j]!=null){
                     
                     if(Cod.Cod[Cod.i][Cod.j].contains("{")){
-                        Cod.Looping=0;
+                        
                         break;
                     }else{
                         Cod.j++;
@@ -59,23 +89,25 @@ class Laco{
                     
                     
                 }
+                int CountO=0;
+                int CountU=0;
                 
                 while(Cod.Cod[Cod.i][Cod.j]!=null){
                     
                     if(Cod.Cod[Cod.i][Cod.j].contains("{")){
                         
-                        Cod.Looping++;
+                        CountO++;
                         
                     }
                     if(Cod.Cod[Cod.i][Cod.j].contains("}")){
                         
-                        Cod.Looping--;
+                        CountU--;
                         
                     }
                     
                     if(Cod.Cod[Cod.i][Cod.j].contains(";") || Cod.Cod[Cod.i][Cod.j].contains("{") || Cod.Cod[Cod.i][Cod.j].contains("}")){
                         
-                        if(Cod.Looping==0){
+                        if(CountU==0){
                             break;
                             
                         }

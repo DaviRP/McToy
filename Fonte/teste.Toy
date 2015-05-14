@@ -1,9 +1,8 @@
+$a=0;
+$l=10;
 
-$a=1;
 
-  
-    Amostra.O $a;
-
+Amostra.O $l;
 end
 
 
