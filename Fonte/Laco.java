@@ -1,5 +1,10 @@
-class Laco{
+//Classe responsalvel pelo operador "Flip" funciona como um While
+//A Classe trabalha com o codigo apena nos indices de inicio do laço ateo final
+//chamando dentro dele mesmo uma Classe do tipo Interpretador para Interpretar o codigo
+//contido dentro dos escopos do laço
 
+class Laco{
+    //variaveis que guardam o inicio do laço
     int flipI;
     int flipJ;
     
@@ -10,27 +15,17 @@ class Laco{
         boolean expre = false;
         Interpretador I=new Interpretador();
         
-        if(Cod.Cod[Cod.i][Cod.j].contains("(")){
-            
-            
+        if(Cod.Cod[Cod.i][Cod.j].contains("(")){// Analiza e expressao
             Cod.j+=2;
             expre=L.DistribuidorLogico(Cod);
-            
-            
-        
-              
             if(expre){
-                
+                //Guarda o começo do laço
                 this.flipI=Cod.i;
                 this.flipJ=Cod.j;
                 
                 while(expre){
-                    
-                    
-                    
-                
+                    //Avisao para o interpretador que esta em um laço
                     I.State=true;
-                    
                     while(Cod.Cod[Cod.i][Cod.j]!=null){
                     
                         if(Cod.Cod[Cod.i][Cod.j].contains("{")){
@@ -54,120 +49,48 @@ class Laco{
                     }
                     
                     I.Scope++;
-                    
+                    //interpreta o codigo que existe entre os escopos do laço ate o escopo correspondente
                     I.interpreta(Cod);
-                    
-                    
-                    
                     
                     Cod.i=flipI;
                     Cod.j=flipJ;
                     
                     expre = L.DistribuidorLogico(Cod);
-            
-                
-                
-                    
                 }
                 
-                    
-                        
-                    
-                    
-                
             }
-            if(expre==false){
-                
+            if(expre==false){// Caso a expressao nao seja verdadeira anda ate o escopo correspondente e devolve ao interpretador
                 while(Cod.Cod[Cod.i][Cod.j]!=null){
-                    
                     if(Cod.Cod[Cod.i][Cod.j].contains("{")){
-                        
                         break;
                     }else{
                         Cod.j++;
                     }
-                    
-                    
                 }
                 int CountO=0;
                 int CountU=0;
-                
                 while(Cod.Cod[Cod.i][Cod.j]!=null){
-                    
                     if(Cod.Cod[Cod.i][Cod.j].contains("{")){
-                        
                         CountO++;
-                        
                     }
                     if(Cod.Cod[Cod.i][Cod.j].contains("}")){
-                        
                         CountU--;
-                        
                     }
-                    
                     if(Cod.Cod[Cod.i][Cod.j].contains(";") || Cod.Cod[Cod.i][Cod.j].contains("{") || Cod.Cod[Cod.i][Cod.j].contains("}")){
-                        
                         if(CountU==0){
                             break;
-                            
-                        }
+                            }
                         Cod.i++;
                         Cod.j=0;
-                        
-                        
-                        
-                        
                     }else{
-                        
                         Cod.j++;
                     }
-                    
-                    
-                    
                 }
-                
-                
-                
-                
-                
             }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
         }else{
             
-            //ERRRROOOROROROROR
-            
-            
-            
+            //ERRRROOORORORO
         }
         
-        
-        
-        
-        
-        
-        
-        
-        
     }
-    
-
-
-
-
-
-
-
-
-
 }

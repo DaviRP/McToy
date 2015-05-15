@@ -55,7 +55,7 @@ class Logicos{
         int Indi2  = Cod.indiceVar(Cod.Cod[Cod.i][Cod.j+1]);
             
             
-        if(Indi1!=-1 && Indi2 !=-1){
+        if(Indi1!=-1 && Indi2 !=-1){//Com duas variaveis
             
             if(Cod.variaveis[Indi1].valor < Cod.variaveis[Indi2].valor){
                 
@@ -66,7 +66,7 @@ class Logicos{
             
             
         
-        }else if(Indi1 == -1 && Indi2 !=-1){
+        }else if(Indi1 == -1 && Indi2 !=-1){// Com uma variavel
             
             double valor1 = Double.parseDouble(Cod.Cod[Cod.i][Cod.j-1]);
                                                
@@ -83,7 +83,7 @@ class Logicos{
             
                                                
                     
-            }else if(Indi1!=-1 && Indi2==-1){
+            }else if(Indi1!=-1 && Indi2==-1){// Com uma variavel
                 
                 double valor2 = Double.parseDouble(Cod.Cod[Cod.i][Cod.j+1]);
                                                    
@@ -99,7 +99,7 @@ class Logicos{
                 
                 
                                                    
-                }else{
+                }else{// Nenhuma variavels
                     
                     double valor1 = Double.parseDouble(Cod.Cod[Cod.i][Cod.j-1]);
                     double valor2 = Double.parseDouble(Cod.Cod[Cod.i][Cod.j+1]);
