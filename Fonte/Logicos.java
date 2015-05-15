@@ -21,6 +21,7 @@ class Logicos{
             
         }else if(Cod.Cod[Cod.i][Cod.j].contains(">")){
             return maiorQ(Cod);
+            
         }else if(Cod.Cod[Cod.i][Cod.j].contains(":")){
            return this.equals(Cod);
             

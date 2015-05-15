@@ -26,11 +26,45 @@
 		08AB6C861AE90E4E0040158A /* Logicos.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = Logicos.java; sourceTree = "<group>"; };
 		08BCBC201AD5692C001582C8 /* Toy.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = Toy.java; sourceTree = "<group>"; };
 		08BCBC211AD59D3A001582C8 /* Interpretador.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = Interpretador.java; sourceTree = "<group>"; };
-		08BCBC221AD59DD7001582C8 /* teste.Toy */ = {isa = PBXFileReference; lastKnownFileType = text; path = teste.Toy; sourceTree = "<group>"; };
 		08CB7D701AFFD999007EA6BE /* Laco.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = Laco.java; sourceTree = "<group>"; };
 		08CB7D711AFFFDFC007EA6BE /* Amostra.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = Amostra.java; sourceTree = "<group>"; };
 		08CB7D721B0035E0007EA6BE /* Scan.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = Scan.java; sourceTree = "<group>"; };
 		08EA67E21AE2876F00028556 /* Arquivador.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = Arquivador.java; sourceTree = "<group>"; };
+		08F2854F1B05FA3500131E73 /* manifest.txt */ = {isa = PBXFileReference; lastKnownFileType = text; name = manifest.txt; path = Fonte/manifest.txt; sourceTree = SOURCE_ROOT; };
+		08F285501B060B3400131E73 /* Ex.Toy */ = {isa = PBXFileReference; lastKnownFileType = text; path = Ex.Toy; sourceTree = SOURCE_ROOT; };
+		08F285521B060BA600131E73 /* Ex.Toy */ = {isa = PBXFileReference; lastKnownFileType = text; path = Ex.Toy; sourceTree = "<group>"; };
+		08F285541B060BA600131E73 /* Ex1.Toy */ = {isa = PBXFileReference; lastKnownFileType = text; path = Ex1.Toy; sourceTree = "<group>"; };
+		08F285551B060BA600131E73 /* Ex2.Toy */ = {isa = PBXFileReference; lastKnownFileType = text; path = Ex2.Toy; sourceTree = "<group>"; };
+		08F285561B060BA600131E73 /* Ex3.Toy */ = {isa = PBXFileReference; lastKnownFileType = text; path = Ex3.Toy; sourceTree = "<group>"; };
+		08F285571B060BA600131E73 /* Ex4.Toy */ = {isa = PBXFileReference; lastKnownFileType = text; path = Ex4.Toy; sourceTree = "<group>"; };
+		08F285581B060BA600131E73 /* File */ = {isa = PBXFileReference; lastKnownFileType = text; path = File; sourceTree = "<group>"; };
+		08F2855A1B060BA600131E73 /* Amostra.class */ = {isa = PBXFileReference; lastKnownFileType = compiled.javaclass; path = Amostra.class; sourceTree = "<group>"; };
+		08F2855B1B060BA600131E73 /* Amostra.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = Amostra.java; sourceTree = "<group>"; };
+		08F2855C1B060BA600131E73 /* Arquivador.class */ = {isa = PBXFileReference; lastKnownFileType = compiled.javaclass; path = Arquivador.class; sourceTree = "<group>"; };
+		08F2855D1B060BA600131E73 /* Arquivador.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = Arquivador.java; sourceTree = "<group>"; };
+		08F2855E1B060BA600131E73 /* Codigo.class */ = {isa = PBXFileReference; lastKnownFileType = compiled.javaclass; path = Codigo.class; sourceTree = "<group>"; };
+		08F2855F1B060BA600131E73 /* Codigo.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = Codigo.java; sourceTree = "<group>"; };
+		08F285601B060BA600131E73 /* Ex.Toy */ = {isa = PBXFileReference; lastKnownFileType = text; path = Ex.Toy; sourceTree = "<group>"; };
+		08F285611B060BA600131E73 /* Fluxo.class */ = {isa = PBXFileReference; lastKnownFileType = compiled.javaclass; path = Fluxo.class; sourceTree = "<group>"; };
+		08F285621B060BA600131E73 /* Fluxo.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = Fluxo.java; sourceTree = "<group>"; };
+		08F285631B060BA600131E73 /* Interpretador.class */ = {isa = PBXFileReference; lastKnownFileType = compiled.javaclass; path = Interpretador.class; sourceTree = "<group>"; };
+		08F285641B060BA600131E73 /* Interpretador.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = Interpretador.java; sourceTree = "<group>"; };
+		08F285651B060BA600131E73 /* Laco.class */ = {isa = PBXFileReference; lastKnownFileType = compiled.javaclass; path = Laco.class; sourceTree = "<group>"; };
+		08F285661B060BA600131E73 /* Laco.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = Laco.java; sourceTree = "<group>"; };
+		08F285671B060BA600131E73 /* Logicos.class */ = {isa = PBXFileReference; lastKnownFileType = compiled.javaclass; path = Logicos.class; sourceTree = "<group>"; };
+		08F285681B060BA600131E73 /* Logicos.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = Logicos.java; sourceTree = "<group>"; };
+		08F285691B060BA600131E73 /* manifest.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = manifest.txt; sourceTree = "<group>"; };
+		08F2856A1B060BA600131E73 /* Matematica.class */ = {isa = PBXFileReference; lastKnownFileType = compiled.javaclass; path = Matematica.class; sourceTree = "<group>"; };
+		08F2856B1B060BA600131E73 /* Matematica.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = Matematica.java; sourceTree = "<group>"; };
+		08F2856C1B060BA600131E73 /* Scan.class */ = {isa = PBXFileReference; lastKnownFileType = compiled.javaclass; path = Scan.class; sourceTree = "<group>"; };
+		08F2856D1B060BA600131E73 /* Scan.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = Scan.java; sourceTree = "<group>"; };
+		08F2856E1B060BA600131E73 /* Toy.class */ = {isa = PBXFileReference; lastKnownFileType = compiled.javaclass; path = Toy.class; sourceTree = "<group>"; };
+		08F2856F1B060BA600131E73 /* Toy.jar */ = {isa = PBXFileReference; lastKnownFileType = archive.jar; path = Toy.jar; sourceTree = "<group>"; };
+		08F285701B060BA600131E73 /* Toy.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = Toy.java; sourceTree = "<group>"; };
+		08F285711B060BA600131E73 /* Variavel.class */ = {isa = PBXFileReference; lastKnownFileType = compiled.javaclass; path = Variavel.class; sourceTree = "<group>"; };
+		08F285721B060BA600131E73 /* Variavel.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = Variavel.java; sourceTree = "<group>"; };
+		08F285731B060BA600131E73 /* McToy.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = McToy.xcodeproj; sourceTree = "<group>"; };
+		08F285761B060BA600131E73 /* Toy.jar */ = {isa = PBXFileReference; lastKnownFileType = archive.jar; path = Toy.jar; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -68,6 +102,7 @@
 		083EC2EE1AD462F20070632C = {
 			isa = PBXGroup;
 			children = (
+				08F285511B060BA600131E73 /* McToy */,
 				0811294B1AD6A05D00E616F4 /* testes */,
 				083EC3001AD4648D0070632C /* Exemplos */,
 				083EC2FD1AD464410070632C /* Fonte */,
@@ -77,8 +112,9 @@
 		083EC2FD1AD464410070632C /* Fonte */ = {
 			isa = PBXGroup;
 			children = (
+				08F285501B060B3400131E73 /* Ex.Toy */,
+				08F2854F1B05FA3500131E73 /* manifest.txt */,
 				08BCBC201AD5692C001582C8 /* Toy.java */,
-				08BCBC221AD59DD7001582C8 /* teste.Toy */,
 				08CB7D721B0035E0007EA6BE /* Scan.java */,
 				08CB7D711AFFFDFC007EA6BE /* Amostra.java */,
 				08EA67E21AE2876F00028556 /* Arquivador.java */,
@@ -104,6 +140,67 @@
 			path = Exemplos;
 			sourceTree = "<group>";
 		};
+		08F285511B060BA600131E73 /* McToy */ = {
+			isa = PBXGroup;
+			children = (
+				08F285521B060BA600131E73 /* Ex.Toy */,
+				08F285531B060BA600131E73 /* Exemplos */,
+				08F285591B060BA600131E73 /* Fonte */,
+				08F285731B060BA600131E73 /* McToy.xcodeproj */,
+				08F285761B060BA600131E73 /* Toy.jar */,
+			);
+			name = McToy;
+			sourceTree = SOURCE_ROOT;
+		};
+		08F285531B060BA600131E73 /* Exemplos */ = {
+			isa = PBXGroup;
+			children = (
+				08F285541B060BA600131E73 /* Ex1.Toy */,
+				08F285551B060BA600131E73 /* Ex2.Toy */,
+				08F285561B060BA600131E73 /* Ex3.Toy */,
+				08F285571B060BA600131E73 /* Ex4.Toy */,
+				08F285581B060BA600131E73 /* File */,
+			);
+			path = Exemplos;
+			sourceTree = "<group>";
+		};
+		08F285591B060BA600131E73 /* Fonte */ = {
+			isa = PBXGroup;
+			children = (
+				08F2855A1B060BA600131E73 /* Amostra.class */,
+				08F2855B1B060BA600131E73 /* Amostra.java */,
+				08F2855C1B060BA600131E73 /* Arquivador.class */,
+				08F2855D1B060BA600131E73 /* Arquivador.java */,
+				08F2855E1B060BA600131E73 /* Codigo.class */,
+				08F2855F1B060BA600131E73 /* Codigo.java */,
+				08F285601B060BA600131E73 /* Ex.Toy */,
+				08F285611B060BA600131E73 /* Fluxo.class */,
+				08F285621B060BA600131E73 /* Fluxo.java */,
+				08F285631B060BA600131E73 /* Interpretador.class */,
+				08F285641B060BA600131E73 /* Interpretador.java */,
+				08F285651B060BA600131E73 /* Laco.class */,
+				08F285661B060BA600131E73 /* Laco.java */,
+				08F285671B060BA600131E73 /* Logicos.class */,
+				08F285681B060BA600131E73 /* Logicos.java */,
+				08F285691B060BA600131E73 /* manifest.txt */,
+				08F2856A1B060BA600131E73 /* Matematica.class */,
+				08F2856B1B060BA600131E73 /* Matematica.java */,
+				08F2856C1B060BA600131E73 /* Scan.class */,
+				08F2856D1B060BA600131E73 /* Scan.java */,
+				08F2856E1B060BA600131E73 /* Toy.class */,
+				08F2856F1B060BA600131E73 /* Toy.jar */,
+				08F285701B060BA600131E73 /* Toy.java */,
+				08F285711B060BA600131E73 /* Variavel.class */,
+				08F285721B060BA600131E73 /* Variavel.java */,
+			);
+			path = Fonte;
+			sourceTree = "<group>";
+		};
+		08F285741B060BA600131E73 /* Products */ = {
+			isa = PBXGroup;
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXProject section */
@@ -121,6 +218,12 @@
 			);
 			mainGroup = 083EC2EE1AD462F20070632C;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 08F285741B060BA600131E73 /* Products */;
+					ProjectRef = 08F285731B060BA600131E73 /* McToy.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 			);

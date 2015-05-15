@@ -102,7 +102,7 @@ class Interpretador{
                 
                 
                 
-                if(Cod.Cod[Cod.i][Cod.j].contains(";")|| Cod.Cod[Cod.i][Cod.j+1]==null || Cod.Cod[Cod.i][Cod.j]==null ){
+                if(Cod.Cod[Cod.i][Cod.j].contains(";")|| Cod.Cod[Cod.i][Cod.j+1]==null || Cod.Cod[Cod.i][Cod.j]==null]{
                    
                     
                         Cod.j=0;
