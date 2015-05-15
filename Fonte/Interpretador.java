@@ -68,14 +68,14 @@ class Interpretador{
                     
                 }
                 
-                if(Cod.Cod[Cod.i][Cod.j].equals("end") ){
+                if(Cod.Cod[Cod.i][Cod.j].contains("end") ){
                     
                     break;
                     
                     
                 }
                 
-                if(this.State==true){
+                if(this.State){
                     
                     if(Cod.Cod[Cod.i][Cod.j].contains("{")){
                         
@@ -102,7 +102,7 @@ class Interpretador{
                 
                 
                 
-                if(Cod.Cod[Cod.i][Cod.j].contains(";") ||Cod.Cod[Cod.i][Cod.j].contains("{")  ||  Cod.Cod[Cod.i][Cod.j].contains("}")){
+                if(Cod.Cod[Cod.i][Cod.j].contains(";")|| Cod.Cod[Cod.i][Cod.j+1]==null || Cod.Cod[Cod.i][Cod.j]==null ){
                    
                     
                         Cod.j=0;

@@ -23,61 +23,70 @@ class Laco{
                 this.flipI=Cod.i;
                 this.flipJ=Cod.j;
                 
-                while(expre){
-                    //Avisao para o interpretador que esta em um laço
-                    I.State=true;
-                    while(Cod.Cod[Cod.i][Cod.j]!=null){
+                while(expre==true){
                     
+                    while(Cod.Cod[Cod.i][Cod.j]!=null){
                         if(Cod.Cod[Cod.i][Cod.j].contains("{")){
-                            
+                        
                             break;
-                            
-                        }else if(Cod.Cod[Cod.i][Cod.j]==null){
+                        }else if(Cod.Cod[Cod.i][Cod.j+1]==null){
                             Cod.i++;
                             Cod.j=0;
                         }else{
                             Cod.j++;
                         }
-                    
                     }
+                
                     
-                    if(Cod.Cod[Cod.i][Cod.j+1]==null){
-                        Cod.i++;
-                        Cod.j=0;
-                    }else{
-                        Cod.j++;
-                    }
+                  
                     
-                    I.Scope++;
+                    
+                    //Avisao para o interpretador que esta em um laço
+                    I.State=true;
+                    
                     //interpreta o codigo que existe entre os escopos do laço ate o escopo correspondente
+                    
+
                     I.interpreta(Cod);
                     
                     Cod.i=flipI;
                     Cod.j=flipJ;
                     
+
+                    
                     expre = L.DistribuidorLogico(Cod);
+                
+
+                    
                 }
                 
             }
             if(expre==false){// Caso a expressao nao seja verdadeira anda ate o escopo correspondente e devolve ao interpretador
                 while(Cod.Cod[Cod.i][Cod.j]!=null){
                     if(Cod.Cod[Cod.i][Cod.j].contains("{")){
+                        
                         break;
+                        
+                    }else if(Cod.Cod[Cod.i][Cod.j+1]==null){
+                        Cod.i++;
+                        Cod.j=0;
                     }else{
                         Cod.j++;
                     }
                 }
-                int CountO=0;
-                int CountU=0;
+                int CountE=0;
+            
                 while(Cod.Cod[Cod.i][Cod.j]!=null){
                     if(Cod.Cod[Cod.i][Cod.j].contains("{")){
-                        CountO++;
+                        
+                        CountE++;
                     }
                     if(Cod.Cod[Cod.i][Cod.j].contains("}")){
-                        CountU--;
+                        CountE--;
                     }
-                    if(Cod.Cod[Cod.i][Cod.j].contains(";") || Cod.Cod[Cod.i][Cod.j].contains("{") || Cod.Cod[Cod.i][Cod.j].contains("}")){
-                        if(CountU==0){
+                    if(Cod.Cod[Cod.i][Cod.j].contains(";")||Cod.Cod[Cod.i][Cod.j+1]==null ||Cod.Cod[Cod.i][Cod.j]==null || Cod.Cod[Cod.i][Cod.j].contains("}")){
+                        if(CountE==0){
+                           
                             break;
                             }
                         Cod.i++;

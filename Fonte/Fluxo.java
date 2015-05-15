@@ -57,7 +57,11 @@ class Fluxo{
                         Cod.j++;
                     }
                 }
+                
             }
+            
+            
+            
                 
         }else{
                 //ERROOOOOOO

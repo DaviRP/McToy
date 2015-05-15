@@ -17,6 +17,10 @@
 		081129551AD6A42300E616F4 /* Main.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = Main.java; sourceTree = "<group>"; };
 		0822E4D21AFCF712007D62AA /* Matematica.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = Matematica.java; sourceTree = "<group>"; };
 		0829296B1AE534BE009CB50E /* Variavel.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = Variavel.java; sourceTree = "<group>"; };
+		0834D2D11B05760500DDC07E /* Ex1.Toy */ = {isa = PBXFileReference; lastKnownFileType = text; path = Ex1.Toy; sourceTree = "<group>"; };
+		0834D2D21B05763B00DDC07E /* Ex2.Toy */ = {isa = PBXFileReference; lastKnownFileType = text; path = Ex2.Toy; sourceTree = "<group>"; };
+		0834D2D41B05777500DDC07E /* Ex3.Toy */ = {isa = PBXFileReference; lastKnownFileType = text; path = Ex3.Toy; sourceTree = "<group>"; };
+		0834D2D51B05783400DDC07E /* Ex4.Toy */ = {isa = PBXFileReference; lastKnownFileType = text; path = Ex4.Toy; sourceTree = "<group>"; };
 		087FDE7B1AF3F526001BD252 /* Codigo.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = Codigo.java; sourceTree = "<group>"; };
 		088BA7D71AFB84B100377F44 /* Fluxo.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = Fluxo.java; sourceTree = "<group>"; };
 		08AB6C861AE90E4E0040158A /* Logicos.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = Logicos.java; sourceTree = "<group>"; };
@@ -92,6 +96,10 @@
 		083EC3001AD4648D0070632C /* Exemplos */ = {
 			isa = PBXGroup;
 			children = (
+				0834D2D11B05760500DDC07E /* Ex1.Toy */,
+				0834D2D41B05777500DDC07E /* Ex3.Toy */,
+				0834D2D21B05763B00DDC07E /* Ex2.Toy */,
+				0834D2D51B05783400DDC07E /* Ex4.Toy */,
 			);
 			path = Exemplos;
 			sourceTree = "<group>";

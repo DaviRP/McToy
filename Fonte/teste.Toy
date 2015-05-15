@@ -1,8 +1,16 @@
-$a=0;
-$l=10;
+
+$a;
+a =5;
+$b=0;
+
+    
+    
+    Flip(a : 0 ){
+        Amostra.O $a;
+        a=a^1;
+
+    }
 
 
-Amostra.O $l;
+
 end
-
-

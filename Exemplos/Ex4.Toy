@@ -1,0 +1,11 @@
+
+$a;
+$b;
+
+a= 1+1;
+b= a +1;
+
+Amostra.O $a;
+Amostra.O $b;
+
+end

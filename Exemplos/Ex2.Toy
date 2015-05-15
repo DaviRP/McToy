@@ -1,0 +1,10 @@
+
+$a;
+
+a = 2;
+
+Amostra.O $a;
+
+a=10;
+
+Amostra.O $a;

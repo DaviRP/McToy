@@ -20,13 +20,22 @@ class Logicos{
             return menorQ(Cod);
             
         }else if(Cod.Cod[Cod.i][Cod.j].contains(">")){
-            //negando a saida do metodo "Menos que" para obter um "Maior que"
-            if(menorQ(Cod)==false){
-                return true;
-                }else{
+            return maiorQ(Cod);
+        }else if(Cod.Cod[Cod.i][Cod.j].contains(":")){
+           return this.equals(Cod);
+            
+        }else if(Cod.Cod[Cod.i][Cod.j].contains("!")){
+            if(equals(Cod)==true){
                 return false;
+            }else{
+                return true;
             }
+            
         }
+            
+            
+            
+        
         
         return false;// restorna falso se a exprecao nao foi Compreendida ou usada com um simbolo invalido
     }
@@ -58,14 +67,13 @@ class Logicos{
         if(Indi1!=-1 && Indi2 !=-1){//Com duas variaveis
             
             if(Cod.variaveis[Indi1].valor < Cod.variaveis[Indi2].valor){
-                
                 return true;
-        }else{
+            }else if(Cod.variaveis[Indi1].valor == Cod.variaveis[Indi2].valor){
+                return false;
+            }else{
                 return false;
             }
             
-            
-        
         }else if(Indi1 == -1 && Indi2 !=-1){// Com uma variavel
             
             double valor1 = Double.parseDouble(Cod.Cod[Cod.i][Cod.j-1]);
@@ -74,49 +82,193 @@ class Logicos{
                 
                 return true;
                 
-            }else{
+            }else if(valor1 == Cod.variaveis[Indi2].valor) {
                 return false;
                     
-                }
+            }else{
+                return false;
+            }
             
                                                
             
                                                
                     
-            }else if(Indi1!=-1 && Indi2==-1){// Com uma variavel
+        }else if(Indi1!=-1 && Indi2==-1){// Com uma variavel
                 
-                double valor2 = Double.parseDouble(Cod.Cod[Cod.i][Cod.j+1]);
+            double valor2 = Double.parseDouble(Cod.Cod[Cod.i][Cod.j+1]);
                                                    
-                if(valor2 > Cod.variaveis[Indi1].valor){
+            if(Cod.variaveis[Indi1].valor < valor2){
                     
-                        return true;
+                    return true;
                                                        
-                }else{
-                        return false;
+            }else if(valor2 == Cod.variaveis[Indi1].valor){
+                    return false;
                                                        
-                }
+            }else{
+                return false;
+            }
 
                 
                 
                                                    
-                }else{// Nenhuma variavels
+        }else{// Nenhuma variavels
                     
-                    double valor1 = Double.parseDouble(Cod.Cod[Cod.i][Cod.j-1]);
-                    double valor2 = Double.parseDouble(Cod.Cod[Cod.i][Cod.j+1]);
+            double valor1 = Double.parseDouble(Cod.Cod[Cod.i][Cod.j-1]);
+            double valor2 = Double.parseDouble(Cod.Cod[Cod.i][Cod.j+1]);
                                                        
-                    if(valor1 < valor2){
+            if(valor1 < valor2){
                         
-                        return true;
+                return true;
                                                            
-                    }else{
-                        return false;
-                    }
-                    
+            }else if(valor1 == valor2){
+                return false;
+            }else{
+                        
+                return false;
             }
+                    
+        }
                     
                                                        
     }
     
-}
+
+
+    public boolean equals(Codigo Cod){
+
+
+        int Indi1 = Cod.indiceVar(Cod.Cod[Cod.i][Cod.j-1]);
+        int Indi2  = Cod.indiceVar(Cod.Cod[Cod.i][Cod.j+1]);
+
+        if(Indi1!=-1 && Indi2 !=-1){//Com duas variaveis
+            if(Cod.variaveis[Indi1].valor == Cod.variaveis[Indi2].valor){
+                return true;
+            }else{
+                return false;
+            }
+
+         }else if(Indi1 == -1 && Indi2 !=-1){// Com uma variavel
+            double valor1 = Double.parseDouble(Cod.Cod[Cod.i][Cod.j-1]);
+
+            if(valor1 == Cod.variaveis[Indi2].valor){
+
+                return true;
+
+            }else{
+
+                return false;
+
+            }
+
+        }else if(Indi1!=-1 && Indi2==-1){// Com uma variavel
+
+            double valor2 = Double.parseDouble(Cod.Cod[Cod.i][Cod.j+1]);
+
+            if(valor2 == Cod.variaveis[Indi1].valor){
+
+                return true;
+            }else{
+                return false;
+            }
+
+
+        }else{// Nenhuma variavels
+
+
+            double valor1 = Double.parseDouble(Cod.Cod[Cod.i][Cod.j-1]);
+            double valor2 = Double.parseDouble(Cod.Cod[Cod.i][Cod.j+1]);
+
+            if(valor1 == valor2){
+
+                return true;
+
+            }else{
+                return false;
+            }
+        }
+
+
+    }
+
+
+
+
+    public boolean maiorQ(Codigo Cod){
+
+
+        int Indi1 = Cod.indiceVar(Cod.Cod[Cod.i][Cod.j-1]);
+        int Indi2  = Cod.indiceVar(Cod.Cod[Cod.i][Cod.j+1]);
+
+
+        if(Indi1!=-1 && Indi2 !=-1){//Com duas variaveis
+
+            if(Cod.variaveis[Indi1].valor > Cod.variaveis[Indi2].valor){
+
+                return true;
+            }else if(Cod.variaveis[Indi1].valor == Cod.variaveis[Indi2].valor){
+                return false;
+            }else{
+                return false;
+            }
+
+        }else if(Indi1 == -1 && Indi2 !=-1){// Com uma variavel
+
+            double valor1 = Double.parseDouble(Cod.Cod[Cod.i][Cod.j-1]);
+
+            if(valor1 > Cod.variaveis[Indi2].valor){
+
+                return true;
+
+            }else if(valor1 == Cod.variaveis[Indi2].valor) {
+                return false;
+
+            }else{
+                return false;
+            }
+
+
+
+
+
+        }else if(Indi1!=-1 && Indi2==-1){// Com uma variavel
+
+            double valor2 = Double.parseDouble(Cod.Cod[Cod.i][Cod.j+1]);
+
+            if(Cod.variaveis[Indi1].valor > valor2){
+
+                return true;
+
+            }else if(valor2 == Cod.variaveis[Indi1].valor){
+                return false;
+
+            }else{
+                return false;
+            }
+
+
+
+
+        }else{// Nenhuma variavels
+
+            double valor1 = Double.parseDouble(Cod.Cod[Cod.i][Cod.j-1]);
+            double valor2 = Double.parseDouble(Cod.Cod[Cod.i][Cod.j+1]);
+
+            if(valor1 > valor2){
+
+                return true;
+
+            }else if(valor1 == valor2){
+                return false;
+            }else{
+
+                return false;
+            }
+
+        }
+
+
+    }
     
+}
+
 
