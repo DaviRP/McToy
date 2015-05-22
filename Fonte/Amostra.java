@@ -10,11 +10,26 @@ class Amostra{
         //string final de controle
         String S=new String();
         
-        Cod.j++;
+        
         //string para facilitar a concatenacao de preciso
         String space=new String(" ");
         //looping que corre até o final da linha
-        while(Cod.Cod[Cod.i][Cod.j].contains(";")!=true){
+        if(Cod.Cod[Cod.i][Cod.j].contains("Amostra.O")){
+            
+            if(Cod.Cod[Cod.i][Cod.j]==null){
+                Cod.i++;
+                Cod.j=0;
+                
+            }else{
+                Cod.j++;
+            }
+        }
+        while(Cod.Cod[Cod.i][Cod.j]!=null){
+            if(Cod.Cod[Cod.i][Cod.j].contains(";")){
+                break;
+            }
+            
+            
             //checa se o parametro é uma variavel valida
             if(Cod.indiceVar(Cod.Cod[Cod.i][Cod.j])!=-1 && Cod.Cod[Cod.i][Cod.j].contains("$")){
                 
@@ -29,7 +44,14 @@ class Amostra{
                 S += space;
                 
             }
-            Cod.j++;
+            
+            if(Cod.Cod[Cod.i][Cod.j]==null){
+                Cod.i++;
+                Cod.j=0;
+                
+            }else{
+                Cod.j++;
+            }
         }
         
         //final print

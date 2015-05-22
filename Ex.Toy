@@ -1,15 +1,13 @@
-
-
-$a=0;
-
-
-
-Flip(a < 10){
-
-    Amostra.O $a;
-    a=a+1;
+$a = 5 ;
+$d = 0 ;
+Flip ( a < 10 ) {
+True?(a : 8){
+Amostra.O $a;
+    True?(a <7){
+        Amostra.O $a;
+    }
 
 }
-
-
+a = a + 1 ;
+}
 end

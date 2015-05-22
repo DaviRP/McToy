@@ -7,8 +7,8 @@ class Logicos{
         if(Cod.Cod[Cod.i][Cod.j].contains("=")){
             if(Cod.Cod[Cod.i][Cod.j+2].contains(";")){//Em caso de atribuicao normal
                 
-            this.igual(Cod);
-            
+                this.igual(Cod);
+                Cod.j++;
             }else{//Em caso de atribuicao com exprecoes matematicas
                 Matematica M=new Matematica();
                 

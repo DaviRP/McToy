@@ -31,9 +31,14 @@ class Toy{
             count++;
         }
         
+        try{
         
-        I.interpreta(a.arquiva(linhas));
-        
+            I.interpreta(a.arquiva(linhas));
+        }catch(Exception E){
+            
+            System.out.println("Meça suas Identaçao Parça");
+            
+        }
         
     }
 }

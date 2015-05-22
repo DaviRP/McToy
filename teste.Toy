@@ -1,0 +1,30 @@
+$a = 5 ;
+$d = 0 ;
+$i;
+
+Flip ( a < 10 ) {
+   
+     Flip( d < 5){
+        Amostra.O $d;
+        d=d+1;
+        }
+    
+    True?(a:8){
+        Amostra.O $a Sou malandrao, Tio !;
+        
+        Flip(i<5){
+            Amostra.O $a "measure your words" - Toy Mc !;
+            i=i+1;
+
+        }
+    }
+    Amostra.O $a;
+    a = a + 1 ;
+}True?(a : 10){
+    
+    Amostra.O $a Fim !;
+    a = a % 2 ;
+    Amostra.O $a Agora sim acabo;
+}
+
+end

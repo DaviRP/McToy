@@ -13,12 +13,12 @@ class Laco{
         Logicos L=new Logicos();
         Cod.j++;
         boolean expre = false;
-        Interpretador I=new Interpretador();
+        Interpretador InterInterpret=new Interpretador();
         
         if(Cod.Cod[Cod.i][Cod.j].contains("(")){// Analiza e expressao
             Cod.j+=2;
             expre=L.DistribuidorLogico(Cod);
-            if(expre){
+            
                 //Guarda o começo do laço
                 this.flipI=Cod.i;
                 this.flipJ=Cod.j;
@@ -42,12 +42,12 @@ class Laco{
                     
                     
                     //Avisao para o interpretador que esta em um laço
-                    I.State=true;
+                    InterInterpret.State=true;
                     
                     //interpreta o codigo que existe entre os escopos do laço ate o escopo correspondente
                     
 
-                    I.interpreta(Cod);
+                    InterInterpret.interpreta(Cod);
                     
                     Cod.i=flipI;
                     Cod.j=flipJ;
@@ -55,12 +55,7 @@ class Laco{
 
                     
                     expre = L.DistribuidorLogico(Cod);
-                
-
-                    
                 }
-                
-            }
             if(expre==false){// Caso a expressao nao seja verdadeira anda ate o escopo correspondente e devolve ao interpretador
                 while(Cod.Cod[Cod.i][Cod.j]!=null){
                     if(Cod.Cod[Cod.i][Cod.j].contains("{")){
@@ -80,20 +75,33 @@ class Laco{
                     if(Cod.Cod[Cod.i][Cod.j].contains("{")){
                         
                         CountE++;
-                    }
-                    if(Cod.Cod[Cod.i][Cod.j].contains("}")){
+                    }else if(Cod.Cod[Cod.i][Cod.j].contains("}")){
                         CountE--;
                     }
-                    if(Cod.Cod[Cod.i][Cod.j].contains(";")||Cod.Cod[Cod.i][Cod.j+1]==null ||Cod.Cod[Cod.i][Cod.j]==null || Cod.Cod[Cod.i][Cod.j].contains("}")){
-                        if(CountE==0){
-                           
-                            break;
-                            }
+                  
+                    if(Cod.Cod[Cod.i][Cod.j].contains(";")||Cod.Cod[Cod.i][Cod.j+1]==null ||Cod.Cod[Cod.i][Cod.j]==null){
                         Cod.i++;
                         Cod.j=0;
+                        if(CountE==0){
+                            
+                            break;
+                            
+                        }
+                       
+                        
+
                     }else{
                         Cod.j++;
+                        
+                        if(CountE==0){
+                            
+                            break;
+                            
+                        }
+                        
+
                     }
+                    
                 }
             }
         }else{

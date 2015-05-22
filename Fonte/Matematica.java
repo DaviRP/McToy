@@ -9,7 +9,10 @@ class Matematica{
     public double DistribuidorMatematico(Codigo Cod){//looping principal de atribuicao
         
         while(Cod.Cod[Cod.i][Cod.j]!=null){
-            Cod.j++;
+            if(Cod.Cod[Cod.i][Cod.j]==null){
+                Cod.i++;
+                Cod.j=0;
+            }else{Cod.j++;}
             if(Cod.Cod[Cod.i][Cod.j].contains("+")){
                 
                 this.somador(Cod);
@@ -26,8 +29,12 @@ class Matematica{
             
                 this.divisor(Cod);
             
+            }else if(Cod.Cod[Cod.i][Cod.j].contains("%")){
+                
+                this.mod(Cod);
+                
             }else if(Cod.Cod[Cod.i][Cod.j].contains(";")){
-               Cod.j--;
+               
                 return value;
                 
             }else if(Cod.indiceVar(Cod.Cod[Cod.i][Cod.j])!=-1){
@@ -35,6 +42,8 @@ class Matematica{
                 value=Cod.variaveis[Cod.indiceVar(Cod.Cod[Cod.i][Cod.j])].valor;
                
             }else if(Cod.indiceVar(Cod.Cod[Cod.i][Cod.j])==-1){
+                
+             
                 
                 this.value=Double.parseDouble(Cod.Cod[Cod.i][Cod.j]);
                 
@@ -97,5 +106,21 @@ class Matematica{
             
             this.value -=Double.parseDouble(Cod.Cod[Cod.i][Cod.j]);
         }
+    }
+    public void mod(Codigo Cod){
+        
+        Cod.j++;
+        
+        
+        if(Cod.indiceVar(Cod.Cod[Cod.i][Cod.j])!=-1){
+            
+            this.value = this.value % Cod.variaveis[Cod.indiceVar(Cod.Cod[Cod.i][Cod.j])].valor;
+            
+        }else{
+           this.value = this.value % Double.parseDouble(Cod.Cod[Cod.i][Cod.j]);
+            
+        }
+        
+        
     }
 }

@@ -21,11 +21,23 @@ class Interpretador{
         Laco Lc =new Laco();
         Amostra A=new Amostra();
         Scan Scn=new Scan();
-
+        
+        
        
 
             while(Cod.Cod[Cod.i][Cod.j]!=null){
                 
+                
+                if(Cod.Cod[Cod.i][Cod.j].contains("Flip")){
+                    
+                    Lc.Flip(Cod);
+                    
+                }
+                if(Cod.Cod[Cod.i][Cod.j].contains("True?")){
+                    
+                    F.True(Cod);
+                    
+                }
                 
                
                 if(Cod.Cod[Cod.i][Cod.j].contains("$")){
@@ -52,21 +64,13 @@ class Interpretador{
                 if(Cod.Cod[Cod.i][Cod.j].contains("=")){
                     
                     L.DistribuidorLogico(Cod);
-                    Cod.j++;
+                    
                     
 
                 }
                 
-                if(Cod.Cod[Cod.i][Cod.j].contains("True?")){
-                    
-                    F.True(Cod);
-                    
-                }
-                if(Cod.Cod[Cod.i][Cod.j].contains("Flip")){
-                    
-                    Lc.Flip(Cod);
-                    
-                }
+                
+               
                 
                 if(Cod.Cod[Cod.i][Cod.j].contains("end") ){
                     
@@ -75,7 +79,7 @@ class Interpretador{
                     
                 }
                 
-                if(this.State){
+                if(this.State==true){
                     
                     if(Cod.Cod[Cod.i][Cod.j].contains("{")){
                         
@@ -101,8 +105,7 @@ class Interpretador{
                 
                 
                 
-                
-                if(Cod.Cod[Cod.i][Cod.j].contains(";")|| Cod.Cod[Cod.i][Cod.j+1]==null || Cod.Cod[Cod.i][Cod.j]==null]{
+                if(Cod.Cod[Cod.i][Cod.j].contains(";")|| Cod.Cod[Cod.i][Cod.j+1]==null || Cod.Cod[Cod.i][Cod.j]==null){
                    
                     
                         Cod.j=0;

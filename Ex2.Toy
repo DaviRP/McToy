@@ -1,0 +1,11 @@
+
+$a=2;
+
+Flip(a ! 0){
+
+    Value.In $a;
+    Amostra.O $a;
+
+}
+
+end

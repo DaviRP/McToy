@@ -27,7 +27,7 @@ class Fluxo{
                     if(Cod.Cod[Cod.i][Cod.j].contains("{")){
                         break;
                     }
-                    if(Cod.Cod[Cod.i][Cod.j]==null){
+                    if(Cod.Cod[Cod.i][Cod.j+1]==null){
                         Cod.i++;
                         Cod.j=0;
                         
@@ -47,6 +47,14 @@ class Fluxo{
                         this.state--;
                     }
                     if(this.state==0){
+                        if(Cod.Cod[Cod.i][Cod.j+1]==null){
+                            Cod.i++;
+                            Cod.j=0;
+                        }else{
+                            Cod.j++;
+                        }
+                        
+                        
                         break;
                     }
                     if(Cod.Cod[Cod.i][Cod.j].equals(";") || Cod.Cod[Cod.i][Cod.j].equals("{") || Cod.Cod[Cod.i][Cod.j].equals("}")){

@@ -35,6 +35,7 @@ class Arquivador{
             Linhas [i]= Linhas[i].replace("Value.In"," Value.In ");
             Linhas [i]= Linhas[i].replace(":"," : ");
             Linhas [i]= Linhas[i].replace("!"," ! ");
+            Linhas [i]= Linhas[i].replace("%"," % ");
          
             i++;
         }

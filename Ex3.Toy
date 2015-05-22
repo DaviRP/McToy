@@ -1,14 +1,18 @@
 
 $a;
-a =1;
+a=0;
 
- True?(a > 1){
+ True?(0 > 1){
  
     Amostra.O Maior;
  
  
  }
- True(a < 1){
+ 
+
+ True?(a < 1){
  
  Amostra.O Menor;
  }
+
+ end
