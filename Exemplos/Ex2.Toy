@@ -1,11 +1,11 @@
 
-$a;
+$a=2;
 
-a = 2;
+Flip(a ! 0){
 
-Amostra.O $a;
+    Value.In $a;
+    Amostra.O $a;
 
-a=10;
+}
 
-Amostra.O $a;
 end
